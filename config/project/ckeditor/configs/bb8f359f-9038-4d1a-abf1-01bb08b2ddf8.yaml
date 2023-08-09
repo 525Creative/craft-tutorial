@@ -1,0 +1,14 @@
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+name: 'Post Content config'
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - link
