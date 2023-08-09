@@ -3,7 +3,11 @@
 /vendor
 .DS_Store
 
-storage
+# Node.js
+node-debug.log
+node_modules/
 
+# Data
+storage
 web/cpresources/
 web/uploads/
