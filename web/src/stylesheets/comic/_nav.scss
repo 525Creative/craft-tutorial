@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+  list-style: none;
+
+
+  @include at-l {
+    flex-flow: row;
+  }
+
+  &_item {
+    margin-bottom: 5px;
+    font-weight: 800;
+    font-size: $f-m;
+    font-family: $f-comic;
+    text-align: center;
+
+    @include at-m {
+      text-align: right;
+    }
+
+    @include at-l {
+      margin: 0 0 0 25px;
+    }
+  }
+}

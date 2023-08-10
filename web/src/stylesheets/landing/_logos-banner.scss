@@ -1,0 +1,59 @@
+@use 'sass:math';
+
+.logos-banner {
+  position: relative;
+  text-align: center;
+
+  &_cta {
+    display: none;
+  }
+
+  @include at-m {
+    &_cta {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 470px;
+      max-width: 100%;
+      border-radius: 4px;
+      padding: .25em .5em;
+      background: $c-beige-200;
+      color: $c-beige-500;
+      opacity: 0;
+      text-decoration: none;
+      transform: translate(-50%, -50%);
+      transition: all 150ms ease-in-out;
+
+      &:hover,
+      &:focus {
+        color: $c-dark;
+      }
+    }
+
+    &:hover {
+      .logos-banner_cta {
+        opacity: 1;
+      }
+
+      .customer-logos_logo {
+        filter: blur(4px);
+        opacity: .2;
+      }
+    }
+  }
+
+  &--blue &_cta {
+    background: $c-blue-200;
+    color: $c-blue;
+
+    &:hover,
+    &:focus {
+      color: $c-blue-800;
+    }
+  }
+
+  &--pad-bottom {
+    margin-bottom: math.div($grid-gutter, 2);
+  }
+}

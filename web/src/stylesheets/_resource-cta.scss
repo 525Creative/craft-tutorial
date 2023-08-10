@@ -1,0 +1,58 @@
+a.resource-cta:link,
+a.resource-cta:visited {
+  color: $c-blue;
+}
+
+a.resource-cta:link .resource-cta_text,
+a.resource-cta:visited .resource-cta_text {
+  color: $c-blue-800;
+}
+
+.resource-cta {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5em;
+  padding: 1.25em 1.5em;
+  background: rgba($c-blue, .07);
+  text-decoration: none;
+  transition: background 100ms ease-in-out;
+
+  @include at-xs {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &:hover,
+  &:focus {
+    background: rgba($c-blue, .14);
+  }
+
+  &_icon {
+    margin-bottom: 1em;
+    opacity: .3;
+
+    @include at-xs {
+      margin-right: 1.25em;
+      margin-bottom: 0;
+    }
+
+    img {
+      float: left;
+      margin: 0;
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  &_text {
+    margin-bottom: .2em;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.4;
+  }
+
+  &_link {
+    font-size: $f-m;
+    text-decoration: underline;
+  }
+}

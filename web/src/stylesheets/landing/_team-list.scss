@@ -1,0 +1,156 @@
+/** postcss-bem-linter: define team-list */
+
+@import '../variables';
+$s-avatar: 44px;
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-left: 0;
+
+  &_item {
+    min-width: 55px;
+    margin: 0 .5em 1.25em;
+    text-align: center;
+    list-style: none;
+  }
+  &_photo {
+    display: block;
+    width: $s-avatar;
+    height: $s-avatar;
+    margin: 0 auto;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    box-shadow: 0 0 0 2px $c-page-bg;
+  }
+  &_name {
+    font-size: $f-xs;
+  }
+
+  &--narrow &_item {
+    min-width: 44px;
+    margin: 0 -2px;
+  }
+
+  &--large &_photo {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 4px $c-page-bg;
+  }
+
+  &--overlap &_item {
+    margin: 0 0 0 -1.25em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  /**
+   * Small modifier
+   */
+  &--small &_item {
+    min-width: 32px;
+    margin: 0 .5em 0 0;
+  }
+  &--small &_item--label {
+    padding-right: .25em;
+    font-size: $f-m;
+  }
+  &--small.team-list--overlap &_item {
+    margin: 0 0 0 -.2em;
+  }
+  &--small &_photo {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  /**
+   * Medium modifier
+   */
+  &--medium &_photo {
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 0 4px $c-page-bg;
+  }
+  &--medium.team-list--overlap &_item {
+    margin: 0 0 0 -1em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &--pad {
+    padding: 1em 0;
+  }
+
+  &--hero {
+    margin-top: 2.5em;
+    margin-bottom: -.5em;
+  }
+
+  &--left {
+    justify-content: left;
+  }
+
+  &--left-at-l {
+    @include at-l {
+      justify-content: left;
+    }
+  }
+
+  /**
+   * Profile modifier
+   */
+  &--profile {
+    justify-content: flex-start;
+  }
+  &--profile &_item {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 1.5em;
+    text-align: left;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &--profile &_name {
+    margin: 0;
+    font-size: $f-l;
+  }
+  &--profile &_photo {
+    flex-basis: 60px;
+    width: 60px;
+    height: 60px;
+    margin: 0 1.2em 0 0;
+    box-shadow: none;
+  }
+  &--profile &_social {
+    margin-top: .25em;
+  }
+
+  /**
+   * Inline modifier
+   */
+  &--inline {
+    margin: 1em 0 2em;
+    font-size: $f-m;
+  }
+  &--inline &_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 1em 0 0;
+  }
+  &--inline &_photo {
+    margin: 0 .5em 0 0;
+    box-shadow: 0 0 0 1px $c-hero-text;
+  }
+}

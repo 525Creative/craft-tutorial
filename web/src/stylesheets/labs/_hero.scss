@@ -1,0 +1,125 @@
+/**
+ * Hero blocks for labs landing pages.
+ */
+.hero {
+  padding: 4.5em 0;
+  text-align: center;
+
+  &_title {
+    margin-bottom: 0;
+    font-size: 2.375em; // 38px
+    line-height: 1.2;
+
+    @include at-m {
+      font-size: 2.875em; // 46px
+    }
+
+    @include at-l {
+      font-size: 3.625em; // 58px
+    }
+  }
+
+  &_desc {
+    margin-top: .5em;
+    color: $c-base;
+    font-size: $f-l;
+
+    @include at-l {
+      font-size: 1.3125em; // 21px
+    }
+  }
+
+  &_actions {
+    margin-top: 2em;
+
+    .cta-btn + .cta-btn {
+      margin-top: .75em;
+
+      @include at-xs {
+        margin-top: 0;
+        margin-left: .75em;
+      }
+    }
+  }
+
+  &_meta {
+    color: $c-meta;
+    font-size: $f-s;
+
+    a {
+      color: $c-meta;
+
+      &:hover,
+      &:focus {
+        color: $c-link;
+      }
+    }
+  }
+
+  &_illustration {
+    margin-top: 2.5em;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+
+  /**
+   * Email templates modifier
+   */
+  &--email-templates {
+    padding: 0 0 4.5em;
+    background-color: #F6F6F6;
+    background-image: url('../../../images/labs/email-templates-hero@2x.png');
+    background-repeat: no-repeat;
+    background-position: top center, center -68px;
+    background-size: 1509px 593px;
+
+    @include at-xs {
+      padding: 0 0 3em;
+    }
+  }
+
+  &--email-template-detail {
+    @include at-m {
+      padding-bottom: 0;
+    }
+  }
+
+
+  /**
+   * MailMason modifier
+   */
+  &--mailmason {
+    $gradient: linear-gradient(-180deg, $c-blue-100, rgba($c-blue-100, 0));
+
+    padding: 4em 0 2em;
+    background-image: $gradient;
+
+    @include at-s {
+      background-image: url('../../../images/labs/mailmason/mailmason-hero-bg@2x.png'), $gradient;
+      background-repeat: no-repeat;
+      background-position: top center, top left;
+      background-size: 4000px 712px, cover;
+    }
+  }
+  &--mailmason &_desc {
+    max-width: 500px;
+    margin: .5em auto 0;
+    color: color($c-mailmason, meta);
+  }
+  &--mailmason &_meta {
+    color: rgba(color($c-mailmason, meta), .6);
+
+    a {
+      color: rgba(color($c-mailmason, meta), .6);
+
+      &:hover,
+      &:focus {
+        color: color($c-mailmason, meta);
+      }
+    }
+  }
+}

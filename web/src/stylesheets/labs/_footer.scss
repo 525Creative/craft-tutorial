@@ -1,0 +1,43 @@
+/**
+ * Footer
+ * ---------------------------
+ * Used on labs project pages.
+ */
+.footer {
+  background-color: $c-yellow;
+  color: $c-yellow-600;
+  font-size: $f-xs;
+
+  &_items {
+    margin: 0;
+    padding: .75em 0;
+    text-align: center;
+    list-style: none;
+
+    @include at-l {
+      text-align: left;
+    }
+  }
+
+  &_item {
+    display: inline-block;
+    margin-right: 1em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &_link,
+  &_link:link,
+  &_link:visited {
+    color: $c-yellow-600;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $c-yellow-800;
+      text-decoration: underline;
+    }
+  }
+}

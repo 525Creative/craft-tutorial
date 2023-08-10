@@ -1,0 +1,140 @@
+.alert {
+  position: relative;
+  max-height: 200px;
+  overflow-y: hidden;
+  font-size: $f-s;
+  transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+
+  &--hidden {
+    max-height: 0;
+  }
+
+  &_container {
+    padding: 1em 30px;
+  }
+
+  &_emoji {
+    display: block;
+  }
+
+  &_actions {
+    padding: .5em 0 0;
+    white-space: nowrap;
+
+    a:not(.cta-btn) {
+      color: $c-white;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &_dismiss {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+    background-image: url('../../images/dismiss.svg');
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    opacity: .5;
+    text-indent: -9999px;
+    transition: opacity 100ms ease;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+  &--hidden &_dismiss {
+    opacity: 0;
+  }
+
+  &--warning {
+    border-bottom: 1px solid $c-orange-500;
+    background: $c-orange-400;
+    color: $c-white;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0 1px 2px $c-orange-500;
+  }
+  &--warning &_message {
+    padding-left: 1.6em;
+    background: url('../../images/warning-white.svg') no-repeat left 5px/16px 12px;
+  }
+
+  &--info {
+    background: $c-slate-900;
+    background-image: linear-gradient(45deg, $c-slate-900 0%, $c-slate-800 100%);
+    color: rgba($c-white, .5);
+    -webkit-font-smoothing: antialiased;
+  }
+  &--info &_message strong {
+    color: $c-white;
+    font-weight: 500;
+  }
+  &--info &_message a {
+    color: rgba($c-white, .5);
+
+    &:hover,
+    &:focus {
+      color: $c-white;
+    }
+  }
+
+  &--centered {
+    text-align: center;
+  }
+  &--centered &_message {
+    display: inline-block;
+  }
+  &--centered &_actions {
+    display: inline-block;
+  }
+
+  @include at-m {
+    &_container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: .7em 40px;
+    }
+
+    &_emoji {
+      display: inline-block;
+      margin-right: .75em;
+    }
+
+    &_message {
+      flex-grow: 2;
+    }
+
+    &_actions {
+      padding: 0 0 0 2em;
+    }
+
+    &--centered &_container {
+      justify-content: center;
+    }
+    &--centered &_message {
+      flex-grow: 0;
+    }
+    &--centered &_actions {
+      padding: 0 0 0 1em;
+    }
+
+    &--l &_container {
+      padding: 1.3em 40px;
+    }
+    &--l &_message {
+      font-size: $f-l;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.gloss-term {
+  margin-bottom: 4em;
+
+  &_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 900;
+    font-size: $f-3xl;
+    font-family: $f-comic-sans-serif-wide;
+  }
+
+  p {
+    margin-top: .5em;
+  }
+
+  .badge {
+    margin-right: 8px;
+  }
+}

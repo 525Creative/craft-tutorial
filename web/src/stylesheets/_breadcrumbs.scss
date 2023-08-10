@@ -1,0 +1,42 @@
+.breadcrumbs {
+  margin: 0;
+  padding: 1em 0;
+  color: $c-support-nav-link;
+  font-size: $f-s;
+  text-align: center;
+  list-style: none;
+
+  @include at-l {
+    padding: 1.3em 0 1.2em;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &_item {
+    display: inline;
+    color: $c-support-nav-link;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &_item + &_item::before {
+    content: '»';
+    display: inline;
+    padding: 0 .25em;
+    opacity: .5;
+    font-size: $f-m;
+  }
+
+  &_link,
+  &_link:link,
+  &_link:visited {
+    color: $c-support-nav-link;
+    text-decoration: none;
+
+    &:hover {
+      color: $c-support-nav-link-active;
+    }
+  }
+}

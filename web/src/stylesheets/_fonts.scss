@@ -1,0 +1,51 @@
+/**
+ * Elizeth
+ */
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: Elizeth;
+  font-display: swap;
+  src: url('../../fonts/Elizeth-Medium.woff2') format('woff2'),
+       url('../../fonts/Elizeth-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  font-family: Elizeth;
+  font-display: swap;
+  src: url('../../fonts/Elizeth-MediumItalic.woff2') format('woff2'),
+      url('../../fonts/Elizeth-MediumItalic.woff') format('woff');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: Elizeth;
+  font-display: swap;
+  src: url('../../fonts/Elizeth-Bold.woff2') format('woff2'),
+       url('../../fonts/Elizeth-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 700;
+  font-family: Elizeth;
+  font-display: swap;
+  src: url('../../fonts/Elizeth-BoldItalic.woff2') format('woff2'),
+      url('../../fonts/Elizeth-BoldItalic.woff') format('woff');
+}
+
+/**
+ * Rund Text
+ */
+
+@font-face {
+  font-weight: 100 900;
+  font-family: 'Rund Text';
+  src: url('../../fonts/RundText-Variable.woff2') format('woff2-variations'),
+       url('../../fonts/RundText-Variable.woff') format('woff-variations');
+  font-display: swap;
+}

@@ -1,0 +1,11 @@
+.tab {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+
+  h2:first-child {
+    margin-top: 1.6em;
+  }
+}

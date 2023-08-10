@@ -1,0 +1,312 @@
+.tti {
+  position: relative;
+  margin-top: 2em;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+
+  &_items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 825px;
+    margin: 0 auto;
+    border: 3px solid $c-tti-border;
+    border-radius: 4px;
+    padding: 15px 7.5px 0;
+    background: $c-tti-bg;
+    list-style: none;
+
+    @include at-xs {
+      border-radius: 6px;
+    }
+
+    @include at-s {
+      padding: 25px 12.5px 0;
+    }
+  }
+
+  &_error {
+    padding-bottom: 25px;
+    color: $c-white;
+  }
+
+  &_item {
+    flex-grow: 1;
+    position: relative;
+    margin: 0 7.5px 15px;
+    border-radius: 3px;
+    padding: 15px;
+    background: $c-tti-item-bg;
+    color: $c-white;
+    text-align: center;
+
+    @include at-xxs {
+      flex-grow: 0;
+    }
+
+    @include at-s {
+      margin: 0 12.5px 25px;
+    }
+
+    &--loading {
+      min-height: 80px;
+      background: no-repeat $c-tti-item-bg url('../../../images/loader.svg') 50% 65% / 40px 40px;
+    }
+
+    &--okay .tti_value {
+      color: $c-mint-400;
+    }
+
+    &--disruption .tti_value {
+      color: $c-orange-400;
+    }
+
+    &--error {
+      flex-grow: 2;
+      background: $c-slate-900;
+      color: $c-white;
+      font-size: $f-m;
+
+      a {
+        color: $c-white;
+        white-space: nowrap;
+      }
+
+      img {
+        position: relative;
+        top: -2px;
+        width: 19px;
+        height: 16px;
+        margin-right: .6em;
+        vertical-align: middle;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &_title {
+    margin: 0;
+  }
+
+  &_value {
+    min-height: 42px;
+    margin: 0;
+    font-weight: 500;
+    font-size: $f-5xl;
+  }
+
+  &_graph {
+    width: 110px;
+    height: 22px;
+    margin: 0 auto;
+    padding: .5em 0 0;
+
+    embed {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &_average {
+    margin-top: 0;
+    color: $c-slate-400;
+    font-size: 0.8em;
+  }
+
+  &_cta {
+    height: 35px;
+    margin-top: -3px;
+    background: url('../../../images/tti-bottom@2x.png') 50% 100%/auto 35px no-repeat;
+    color: $c-slate-400;
+    font-size: $f-s;
+    text-align: center;
+
+    a {
+      color: $c-slate-400;
+
+      &:hover,
+      &:focus {
+        color: $c-white;
+      }
+    }
+  }
+
+  // Transparent modifier
+
+  &--transparent &_items {
+    border: 0;
+    background: transparent;
+  }
+
+  &--transparent &_item {
+    background-color: $c-white;
+    color: $c-base;
+    box-shadow: 0 0 15px rgba($c-blue, .1);
+  }
+
+  &--transparent &_cta {
+    height: auto;
+    margin-top: 0;
+    background: none;
+    color: $c-meta;
+
+    a:hover,
+    a:focus {
+      color: $c-base;
+    }
+  }
+
+  &--transparent &_item--error a {
+    color: $c-orange-300;
+  }
+
+  // Home modifier
+
+  &--home {
+    margin: 2em 0 0;
+  }
+
+  &--home &_items {
+    justify-content: center;
+    max-width: none;
+    border: 0;
+    padding: 0;
+    background: none;
+  }
+
+  &--home &_item {
+    flex-grow: 1;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0 1.5em 0 0;
+    background-color: transparent;
+
+    @include at-l {
+      margin: 0;
+    }
+  }
+
+  &--home &_item--error {
+    max-width: 420px;
+    margin: 1em auto 0;
+    color: $c-base;
+    font-size: .845em;
+    text-align: center;
+
+    img {
+      display: none;
+    }
+
+    a {
+      color: $c-orange-300;
+    }
+  }
+
+  &--home &_title {
+    color: $c-base;
+    font-weight: bold;
+  }
+
+  &--home &_value {
+    min-height: 0;
+    font-size: 1.6em;
+  }
+
+  &--home &_graph,
+  &--home &_cta {
+    display: none;
+  }
+
+  &--home &_average {
+    color: $c-meta;
+  }
+
+  @include at-l {
+
+    &--home &_item {
+      flex-grow: 0;
+      margin-bottom: 0;
+      padding: 0 2em;
+    }
+  }
+
+  // Enterprise page modifier
+  &--enterprise {
+    margin-top: 0;
+  }
+
+  &--enterprise &_items {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  &--enterprise &_item {
+    flex-basis: 100%;
+    box-sizing: border-box;
+    min-width: 90px;
+    margin: 0 0 1em;
+    border: 1px solid rgba($c-black, .04);
+    border-radius: 10px;
+    padding: 1.5em 1em;
+    background-color: $c-white;
+    box-shadow: 0 0 15px 0 rgba($c-black, .07);
+
+    @include at-s {
+      flex-basis: 47.5%;
+    }
+  }
+
+  &--enterprise &_title {
+    margin-bottom: .25em;
+  }
+
+  &--enterprise &_value {
+    @include at-m {
+      font-size: $f-7xl;
+    }
+  }
+
+  &--enterprise &_graph {
+    display: none;
+  }
+
+  &--enterprise &_cta {
+    font-size: $f-s;
+  }
+
+
+  // Minimal modifier
+  &--minimal {
+    margin-top: 0;
+  }
+  &--minimal &_items {
+    margin: 0;
+    padding: 0;
+  }
+  &--minimal &_graph {
+    display: none;
+  }
+  &--minimal &_item {
+    min-width: 110px;
+    margin: 0 10px 10px 0;
+    box-shadow: 0 0 10px 0 rgba($c-black, .07);
+  }
+
+  // Slim modifier
+  &--slim &_items {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0 0;
+  }
+
+  &--slim &_item {
+    margin: 0 0 25px;
+    border: 1px solid $c-grey-100;
+    padding: 10px;
+    box-shadow: none;
+  }
+}

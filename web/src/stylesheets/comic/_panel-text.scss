@@ -1,0 +1,22 @@
+.bubble-top {
+  top: 15px;
+  right: 15px;
+  left: 15px;
+}
+
+.bubble-bottom {
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+}
+
+.bubble-popped {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.action-text {
+  position: absolute;
+  z-index: 2;
+}

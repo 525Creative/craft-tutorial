@@ -1,0 +1,105 @@
+.signup-form {
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1em;
+
+  &_row {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+  }
+
+  &_label {
+    display: none;
+  }
+
+  &_field {
+    flex-grow: 1;
+    margin-bottom: .75em;
+  }
+
+  &_input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    border: 1px solid $c-yellow-400;
+    border-radius: 4px;
+    padding: 1em 1.2em;
+    font-size: $f-m;
+    font-family: inherit;
+    line-height: normal;
+    appearance: none;
+    transition: all .2s linear;
+
+    &:focus {
+      border-color: $c-yellow-500;
+      outline: none;
+      transition: all .2s linear;
+    }
+
+    &::placeholder {
+      color: $c-meta;
+    }
+  }
+
+  &_button {
+    max-width: none;
+    padding: 1em 1.5em;
+    line-height: 1;
+  }
+
+  &_note {
+    margin: .75em 0 0;
+    opacity: .5;
+    font-size: $f-m;
+    line-height: 1.5;
+  }
+
+  @include at-xs {
+
+    &_row {
+      flex-direction: row;
+      box-shadow: 0 1px 15px rgba($c-black, .09);
+    }
+    &--blue &_row {
+      box-shadow: 0 1px 15px 0 rgba($c-blue-600, .1);
+    }
+
+    &_field {
+      margin-bottom: 0;
+    }
+
+    &_input {
+      border-radius: 4px 0 0 4px;
+      border-right: 0;
+    }
+
+    &_button {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  &--pad-top {
+    margin-top: 4em;
+  }
+
+  &--blue &_input {
+    border-color: rgba($c-blue, .3);
+
+    @include at-xs {
+      border-color: transparent;
+    }
+
+    &:focus {
+      border-color: rgba($c-blue, .5);
+    }
+  }
+  &--blue &_note {
+    color: $c-base;
+  }
+
+  &--dark &_input {
+    border-color: $c-white;
+  }
+}

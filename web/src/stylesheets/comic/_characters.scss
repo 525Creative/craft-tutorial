@@ -1,0 +1,117 @@
+@keyframes run {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 108%;
+  }
+}
+
+@keyframes drive {
+  0% {
+    left: -40%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+.snail {
+  position: absolute;
+  bottom: 4px;
+  z-index: 4;
+  width: 118px;
+  animation: linear infinite;
+  animation-name: run;
+  animation-duration: 50s;
+}
+
+.spot {
+  display: inline-block;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  z-index: 3;
+  margin-left: -84px;
+
+  img {
+    width: 169px;
+  }
+
+  @include at-m {
+    right: 50px;
+    left: auto;
+    margin-left: 0;
+  }
+
+  &--static {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin: 0 auto 25px !important;
+  }
+
+  &_eyes {
+    position: absolute;
+    top: 19px;
+    left: 27px;
+    transform: scale(.5);
+  }
+
+  &_eye {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 10px;
+      bottom: 17px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #000;
+    }
+
+    &:last-child {
+      margin-left: -4px;
+    }
+  }
+}
+
+.marynjim {
+  display: none;
+
+
+  @include at-m {
+    display: block;
+    position: absolute;
+    top: -165px;
+    left: 50px;
+    z-index: 2;
+    width: 450px;
+  }
+
+  @include at-l {
+    left: 100px;
+  }
+}
+
+.car {
+  position: absolute;
+  bottom: 15px;
+  z-index: 4;
+  width: 250px;
+  animation: linear infinite;
+  animation-name: drive;
+  animation-duration: 10s;
+
+  @include at-m {
+    bottom: 25px;
+    width: 337px;
+  }
+}

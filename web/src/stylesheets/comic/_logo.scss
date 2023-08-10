@@ -1,0 +1,53 @@
+.logo {
+  position: relative;
+  width: 90%;
+  max-width: 380px;
+  margin: 0 auto;
+  padding-top: 100px;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    position: absolute;
+    right: 25px;
+    bottom: -5px;
+    margin: 0;
+    font-weight: 800;
+    font-size: 12px;
+    font-family: $f-comic;
+    transform: rotate(15deg);
+
+    @include at-s {
+      right: 45px;
+      bottom: 2px;
+      font-size: $f-s;
+    }
+  }
+
+  @include at-s {
+    max-width: 430px;
+    padding-top: 90px;
+  }
+}
+
+.logo-jtti {
+  width: 200px;
+
+  @include at-m {
+    width: 287px;
+  }
+}
+
+.logo-rr {
+  width: 200px;
+
+  @include at-m {
+    width: 281px;
+  }
+}
+
+.logo-ddd {
+  width: 232px;
+}

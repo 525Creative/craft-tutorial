@@ -1,0 +1,23 @@
+/*
+  Events List
+ */
+
+.events-list {
+  max-width: grid-width(4) + $grid-gutter;
+  margin: 2em auto;
+  border-radius: 4px;
+  padding: 0;
+  overflow: hidden;
+  background: $c-white;
+  box-shadow: 0 1px 2px rgba($c-black, .1);
+  list-style: none;
+
+  &_item {
+    display: block;
+    border-bottom: 1px solid $c-table-border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

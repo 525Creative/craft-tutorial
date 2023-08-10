@@ -1,0 +1,99 @@
+.webinar-banner {
+  $border: 3px;
+  display: block;
+  position: relative;
+  margin-top: 3em;
+  border: solid $border transparent;
+  border-radius: 6px;
+  padding: 15px 50px 15px 20px;
+  background: $c-white;
+  background-clip: padding-box;
+  text-decoration: none;
+  transition: 150ms all ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: linear-gradient(125deg, $c-purple-600, $c-mint);
+    transition: 1000ms all ease-in-out;
+  }
+
+  &:hover {
+    background-color: $c-purple-600;
+
+    &::before {
+      background: linear-gradient(to right, $c-purple-600, $c-purple-600);
+    }
+  }
+
+  &:hover &_title,
+  &:hover &_event {
+    color: $c-white;
+  }
+
+  &:hover &_date {
+    color: $c-white;
+    opacity: .7;
+  }
+
+  &:hover &_arrow {
+    background-color: $c-white;
+  }
+  &:hover &_arrow::after {
+    border-color: $c-purple-600;
+  }
+
+  &_arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $c-mint;
+    transform: translateY(-50%);
+    transition: 150ms all ease-in-out;
+  }
+
+  &_arrow::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -4px;
+    border: solid $c-white;
+    border-width: 0 2px 2px 0;
+    padding: 2px;
+    transform: rotate(-45deg);
+  }
+
+  &_title {
+    display: block;
+    color: $c-dark;
+    font-weight: bold;
+    font-size: $f-l;
+  }
+
+  &_event {
+    display: block;
+    margin-bottom: .2em;
+    color: $c-dark;
+    font-size: $f-l;
+  }
+
+  &_date {
+    display: block;
+    color: $c-meta;
+    font-size: $f-m;
+  }
+}

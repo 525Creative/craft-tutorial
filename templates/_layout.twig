@@ -1,37 +1,65 @@
+{% set isEntry = entry is defined and entry %}
+{% set hasTitleSuffix = hasTitleSuffix is defined ? hasTitleSuffix : true %}
+
 <!DOCTYPE html>
 <html lang="{{ craft.app.language }}">
-    <head>
-        <meta charset="utf-8"/>
-        <title>{{ siteName }}</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{ siteName }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        {% do craft.app.view.registerCssFile('@web/dist/main.css') %}
-    </head>
-    <body>
-    <header>
-        <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
+    {#        {% do craft.app.view.registerCssFile('@web/dist/main.css') %} #}
 
-        {# Get the first segment of the current URI: #}
-        {% set navSegment = craft.app.request.getSegment(1) %}
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="{{ url('blog') }}" class="{{ navSegment == 'blog' ? 'active' : 'inactive' }}">Blog</a>
-                </li>
-                <li>
-                    <a href="{{ url('about') }}" class="{{ navSegment == 'about' ? 'active' : 'inactive' }}">About</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        {% block content %}
-            {# Nothing here, yet! #}
-        {% endblock %}
-    </main>
+    {{ craft.twigpack.includeCssModule('core.css') }}
+    {% if craft.app.config.general.devMode %}
+        {{ craft.twigpack.includeJsModule('core.js') }}
+    {% endif %}
 
-    {% include 'partials/_footer.twig' %}
+    {% if cssBundle is defined %}
+        {{ craft.twigpack.includeCssModule(cssBundle ~ '.css') }}
+        {% if craft.app.config.general.devMode and cssBundle != 'landing' %}
+            {{ craft.twigpack.includeJsModule(cssBundle ~ '.js') }}
+        {% endif %}
+    {% else %}
+        {{ craft.twigpack.includeCssModule('postmark.css') }}
+        {% if craft.app.config.general.devMode %}
+            {{ craft.twigpack.includeJsModule('postmark.js') }}
+        {% endif %}
+    {% endif %}
 
-    </body>
+
+</head>
+<body>
+<header>
+    <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
+
+    {# Get the first segment of the current URI: #}
+    {% set navSegment = craft.app.request.getSegment(1) %}
+
+    <nav>
+        <ul>
+            <li>
+                <a href="{{ url('blog') }}" class="{{ navSegment == 'blog' ? 'active' : 'inactive' }}">Blog</a>
+            </li>
+            <li>
+                <a href="{{ url('about') }}" class="{{ navSegment == 'about' ? 'active' : 'inactive' }}">About</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div>
+    this is a test
+</div>
+
+<main>
+    {% block content %}
+        {# Nothing here, yet! #}
+    {% endblock %}
+</main>
+
+{% include 'partials/_footer.twig' %}
+
+</body>
 </html>

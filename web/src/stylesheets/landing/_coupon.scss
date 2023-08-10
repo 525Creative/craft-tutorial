@@ -1,0 +1,35 @@
+.coupon,
+.scope-text .coupon {
+  position: relative;
+  margin-bottom: 2em;
+  border: 1px solid $c-blue-100;
+  border-radius: 4px;
+  border-top: 4px solid $c-blue-500;
+  padding: 2em;
+  background: $c-blue-50;
+  text-align: center;
+
+  @include at-s {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $c-blue-100;
+    border-left: 4px solid $c-blue-500;
+    text-align: left;
+  }
+
+  &_icon {
+    margin-right: 20px;
+    border: 0;
+    padding: 0;
+  }
+
+  &_text {
+    margin-bottom: .5em;
+    font-weight: bold;
+  }
+
+  &_code {
+    font-size: $f-l;
+    font-family: $f-monospace;
+  }
+}

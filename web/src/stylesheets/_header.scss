@@ -1,0 +1,206 @@
+/** postcss-bem-linter: define header */
+@import 'variables';
+
+.header {
+  background-color: $c-yellow;
+
+  &_branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @include at-l-2 {
+      align-self: center;
+      width: auto;
+    }
+
+    &--centered {
+      justify-content: center;
+    }
+  }
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include at-l-2 {
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &_actions {
+    display: flex;
+  }
+
+  &--full-width &_container {
+    max-width: 100%;
+  }
+
+  &--compact &_container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include at-l {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &--campaign &_container {
+    flex-direction: column;
+    padding-top: 20px;
+
+    @include at-l {
+      padding-top: 40px;
+    }
+  }
+
+  &--campaign &_branding {
+    align-self: auto;
+    justify-content: center;
+  }
+
+  &--labs {
+    margin-bottom: 2em;
+    background-color: transparent;
+
+    @include at-m {
+      margin-bottom: 0;
+    }
+  }
+
+  &--labs &_branding {
+    width: 100%;
+  }
+
+  &--inverted {
+    background: $c-slate-900;
+    color: $c-white;
+  }
+
+  &--bordered {
+    border-bottom: 3px solid $c-yellow-300;
+  }
+
+  &--border-top {
+    border-top: 5px solid $c-yellow;
+  }
+
+  &_postmark-logo {
+    width: 185px;
+    height: 41px;
+    margin: 20px 0;
+    background: url('../../images/logo.svg') no-repeat 0 0;
+    background-size: 100% auto;
+    text-indent: -9999em;
+
+    @include at-l {
+      margin-left: -25px;
+    }
+
+    @include at-l-2 {
+      align-self: flex-end;
+      margin: -10px 0 0 -27px;
+    }
+
+    @include at-xl {
+      width: 200px;
+      height: 44px;
+    }
+
+    .header_branding--centered & {
+      align-self: center;
+      margin: 0;
+    }
+  }
+
+  &--inverted &_postmark-logo {
+    background: url('../../images/logo-inverted.svg') no-repeat 0 0;
+    background-size: 100% auto;
+  }
+
+  &_love {
+    margin: 0 .6em;
+    font-size: $f-7xl;
+  }
+
+  // Additional log in button that only shows up on mobile
+  &_login {
+    @include at-l-2 {
+      display: none !important;
+    }
+  }
+
+
+  &_hamburger {
+    position: relative;
+    box-sizing: border-box;
+    width: 40px;
+    margin: 0 0 0 10px;
+    border: none;
+    background-color: transparent;
+    line-height: normal;
+
+    &:focus {
+      background: transparent;
+      outline: none;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      right: 8px;
+      left: 8px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $c-dark;
+      opacity: .4;
+      transform-origin: center;
+      transition: transform 250ms, background 250ms ease-in-out;
+    }
+    span:nth-child(1) {
+      top: calc(50% - 7px);
+    }
+    span:nth-child(2) {
+      top: calc(50% - 1px);
+      left: 14px;
+    }
+    span:nth-child(3) {
+      top: calc(50% + 5px);
+    }
+
+    // Active state
+    &.is-active {
+      z-index: 1061;  // Sits above Beacon and nav menu
+    }
+    &.is-active span {
+      color: $c-dark;
+      opacity: 1;
+    }
+    &.is-active span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    &.is-active span:nth-child(2) {
+      opacity: 0;
+    }
+    &.is-active span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    @include at-l-2 {
+      display: none !important;
+    }
+  }
+
+  &--inverted &_hamburger span {
+    background-color: $c-white;
+  }
+  &--inverted &_hamburger.is-active span {
+    background-color: $c-dark;
+  }
+}

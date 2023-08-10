@@ -1,0 +1,110 @@
+@use 'sass:math';
+
+.media-block {
+  position: relative;
+  padding: 2em 0;
+
+  &_media {
+    position: relative;
+    border-radius: 6px;
+    padding: math.div($grid-gutter, 3);
+    background: $c-page-bg;
+    text-align: center;
+
+    @include at-m {
+      min-height: 210px;
+    }
+  }
+
+  &_media--centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_image {
+    max-width: 100%;
+  }
+
+  + .icon-list {
+    padding-top: 2em;
+  }
+
+  /**
+   * Video modifier
+   */
+  &--video &_media {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /**
+   * Full-width modifier
+   */
+   &--full &_media {
+    max-width: none;
+    margin: 0 -10px;
+    padding: 10px;
+  }
+
+  /**
+   * Hero modifier
+   */
+  &--hero {
+    padding: 0;
+    box-shadow: 0 0 25px rgba($c-yellow-300, .5);
+  }
+
+  &--hero &_media {
+
+    @include at-m {
+      min-height: 230px;
+    }
+  }
+
+
+  /**
+   * Container background color modifiers
+   */
+  &--blue {
+    background-color: $c-blue-50;
+  }
+
+  &--beige {
+    background-color: $c-beige-100;
+  }
+
+  &--blue &_media,
+  &--beige &_media {
+    box-shadow: 0 1px 2px rgba($c-black, 0.1);
+  }
+
+
+  /**
+   * Media block background color modifiers.
+   */
+  @each $type, $color in $c-accent-colors {
+    &_media--#{$type} {
+      background: radial-gradient(rgba($color, .75), $color), $c-white;
+      color: $c-white;
+    }
+  }
+}
+
+// Display yellow banner if the media block comes after a hero section.
+
+.hero + .media-block {
+  padding-top: 0;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: $c-yellow;
+  }
+}

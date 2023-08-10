@@ -1,0 +1,108 @@
+// Based on https://github.com/wildbit/craft-product-framework/blob/master/html/src/stylesheets/blog/_subscribe.scss
+
+@use 'sass:math';
+
+/* Subscribe
+------------------------------------------------- */
+
+.subscribe {
+  margin: math.div($grid-gutter, 2) auto;
+  color: $c-subscribe-txt;
+
+  @include at-m {
+    max-width: grid-width(4);
+  }
+
+  &--blog {
+    color: $c-subscribe-blog-txt;
+  }
+}
+
+
+  // Form
+
+  .subscribe_form {
+    border: 4px solid $c-subscribe-brd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: $c-subscribe-bg;
+
+    @include at-m {
+      padding: math.div($grid-gutter, 2);
+    }
+
+    > fieldset {
+      margin: 0;
+      border: 0;
+      padding: 0;
+
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+      legend {
+        display: block;
+        margin: 0 0 .75em;
+        color: $c-subscribe-title;
+        font-size: 1.3em;
+      }
+      p {
+        margin: 0 0 1.2em;
+      }
+      input[type='submit'] {
+        color: $c-white;
+      }
+    &--blog {
+      border: 1px solid $c-subscribe-blog-brd;
+      border-radius: 0 0 3px 3px;
+      border-top-width: 3px;
+      background-color: $c-subscribe-blog-bg;
+
+      legend {
+        color: $c-subscribe-blog-title;
+        font-size: $f-4xl;
+      }
+
+      p,
+      .connect_label {
+        color: $c-subscribe-blog-txt;
+      }
+    }
+  }
+
+
+  // Footer
+  .subscribe_footer {
+    margin: 1em 0;
+    color: $c-subscribe-footer;
+    font-size: $f-m;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+
+  // Social
+
+  .subscribe_social {
+    border-top: 0;
+    padding: 20px;
+
+    @include at-m {
+      padding: math.div($grid-gutter, 2);
+    }
+
+    h1 {
+      display: inline-block;
+      margin: 0;
+      color: $c-subscribe-subtitle;
+      font-weight: 500;
+      font-size: $f-m;
+    }
+
+    li {
+      margin-left: .5em;
+    }
+  }

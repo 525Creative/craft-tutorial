@@ -1,0 +1,57 @@
+/* Error
+============================== */
+
+.error-page {
+  // Page
+  .page {
+    h2 {
+      margin: 20px 0;
+      font-size: 1.3em;
+    }
+    p,
+    ul {
+      margin: 1em 0;
+      padding-left: 0;
+      color: $c-grey-800;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+
+    // Lists
+
+    ul {
+      margin-top: 1.75em;
+      list-style-position: inside;
+    }
+    li {
+      position: relative;
+      margin: .5em 0;
+      list-style: none;
+    }
+    li::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 7px;
+      left: -27px;
+      width: 18px;
+      height: 14px;
+      background-image: url('../../../images/i-help.svg');
+      background-repeat: no-repeat;
+    }
+    li.status::before {
+      background-position: 0 0;
+    }
+    li.twitter::before {
+      background-position: 0 -14px;
+    }
+    li.request::before {
+      background-position: 0 -28px;
+    }
+  }
+
+  .footer {
+    padding-top: $grid-gutter;
+  }
+}

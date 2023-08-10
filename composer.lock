@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "139d3ca8a8158c365752771d3831379d",
+    "content-hash": "7afbb95ad85670a56540821226ad0760",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -741,16 +741,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.4.16.1",
+            "version": "4.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "d2f4a215a1e2320841773c50e680509d4a3a5769"
+                "reference": "75cb07ccf7af7fef379fa6f115027535e0f40aee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/d2f4a215a1e2320841773c50e680509d4a3a5769",
-                "reference": "d2f4a215a1e2320841773c50e680509d4a3a5769",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/75cb07ccf7af7fef379fa6f115027535e0f40aee",
+                "reference": "75cb07ccf7af7fef379fa6f115027535e0f40aee",
                 "shasum": ""
             },
             "require": {
@@ -853,7 +853,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2023-07-19T14:56:36+00:00"
+            "time": "2023-08-08T15:54:07+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -1911,7 +1911,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.52.14",
+            "version": "v9.52.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -1966,7 +1966,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.52.14",
+            "version": "v9.52.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2012,7 +2012,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.52.14",
+            "version": "v9.52.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2060,7 +2060,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.52.14",
+            "version": "v9.52.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -2475,6 +2475,67 @@
                 }
             ],
             "time": "2023-08-06T21:30:15+00:00"
+        },
+        {
+            "name": "nystudio107/craft-twigpack",
+            "version": "4.0.0-beta.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft-twigpack.git",
+                "reference": "ef13b43aaa7d40ae2d656681dc02ec5cd61365d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-twigpack/zipball/ef13b43aaa7d40ae2d656681dc02ec5cd61365d9",
+                "reference": "ef13b43aaa7d40ae2d656681dc02ec5cd61365d9",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0-beta.1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "class": "nystudio107\\twigpack\\Twigpack",
+                "handle": "twigpack",
+                "name": "Twigpack"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\twigpack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com/"
+                }
+            ],
+            "description": "Twigpack is a bridge between Twig and webpack, with manifest.json & webpack-dev-server HMR support",
+            "keywords": [
+                "craft-plugin",
+                "craftcms",
+                "hmr-support",
+                "manifest-json",
+                "twig",
+                "webpack",
+                "webpack-dev-server"
+            ],
+            "support": {
+                "docs": "https://nystudio107.com/docs/twigpack/",
+                "issues": "https://nystudio107.com/plugins/twigpack/support",
+                "source": "https://github.com/nystudio107/craft-twigpack"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/khalwat",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-04-26T15:19:38+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -7346,7 +7407,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "nystudio107/craft-twigpack": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

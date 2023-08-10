@@ -1,0 +1,238 @@
+/* Guides
+------------------------------ */
+
+// List of guides
+
+.guides {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: $grid-gutter;
+
+  @include at-m {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+}
+  .guide-link {
+    position: relative;
+    box-sizing: border-box;
+    margin: $grid-gutter 0 15px;
+    border: 3px solid $c-blue-800;
+    border-radius: 3px;
+    padding: 45px 20px 30px;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    transition: 200ms background;
+
+    &,
+    &:link,
+    &:visited {
+      color: $c-blue-400;
+    }
+    &:hover {
+      background-color: $c-blue-50;
+    }
+
+    &--external {
+      border-color: $c-teal-400;
+      .guide-link_new {
+        background: $c-teal-400;
+      }
+      .guide-link_desc {
+        color: $c-meta;
+      }
+    }
+
+    @include at-m {
+      flex: 0 1 46.5%;
+    }
+    @include at-xl {
+      flex-basis: auto;
+
+      width: grid-width(3);
+    }
+
+    &_icon {
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      margin-top: -45px;
+      padding: 0 15px;
+      transform: translateY(-50%) translateX(-50%);
+      backface-visibility: hidden;
+
+      > img {
+        position: relative;
+        z-index: 2;
+        float: left;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 0;
+        margin-top: -4px;
+        border-top: 5px solid $c-white;
+      }
+    }
+    &_title {
+      margin: .75em 0;
+      color: $c-blue-800;
+      font: #{$f-xl}/1.4 $f-elizeth;
+    }
+    &_attr {
+      margin-bottom: 1.25em;
+      span {
+        position: relative;
+        color: $c-teal-400;
+        font-weight: 300;
+        font-size: $f-s;
+        &::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          top: 1px;
+          left: -24px;
+          width: 15px;
+          height: 15px;
+          background: no-repeat url('../../../images/i-external.svg');
+          background-size: 15px 15px;
+        }
+      }
+    }
+    &_desc {
+      margin: 0 0 1em;
+      font-size: $f-m;
+
+      &--quote {
+        margin: 0 0 .5em;
+      }
+    }
+    &_author {
+      margin: 0;
+      color: $c-meta;
+      font-size: $f-m;
+    }
+    &_video {
+      margin-bottom: 0;
+      color: $c-blue-800;
+      font-weight: 500;
+      font-size: $f-s;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        width: 14px;
+        height: 14px;
+        margin-right: .4em;
+        background: no-repeat url('../../../images/icons/play-icon.svg') 0 0 / 100% 100%;
+        filter: brightness(0.5);
+      }
+    }
+    &_new {
+      position: absolute;
+      top: -10px;
+      left: -12px;
+      border-radius: 2px;
+      padding: 3px 5px;
+      background-color: $c-blue-800;
+      color: $c-white;
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      transform: rotate(-35deg);
+    }
+  }
+
+
+// Header image
+
+.guide-head_image {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+
+  &--pad-top-on-mob {
+    margin-top: 2em;
+
+    @include at-l {
+      margin-top: 0;
+    }
+  }
+}
+
+.guide-head_video {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url('../../../images/sparkles.svg');
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    bottom: -22px;
+    left: -20px;
+    width: 31px;
+    height: 39px;
+    background-position: 0 0;
+  }
+
+  &::after {
+    right: -26px;
+    bottom: -28px;
+    width: 38px;
+    height: 40px;
+    background-position: 0 -39px;
+  }
+}
+
+
+// Guide callouts
+
+.guide-callouts {
+  max-width: 630px;
+  margin: 0 auto;
+
+  @include at-s {
+    display: flex;
+  }
+}
+
+
+// Download as PDF
+
+.guide-book {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+.guide-book_cover {
+  padding-right: 15px;
+}
+.guide-book_callout {
+  flex-grow: 2;
+}
+.guide-book_callout-title {
+  margin: -.66em 0 .33em !important;
+  padding: 0;
+}

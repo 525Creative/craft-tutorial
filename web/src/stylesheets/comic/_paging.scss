@@ -1,0 +1,42 @@
+.paging {
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: baseline;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+
+  @include at-s {
+    flex-flow: row;
+    padding: 50px 20px;
+  }
+
+  @include at-m {
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+
+  .btn {
+    box-sizing: border-box;
+    width: 100%;
+
+    @include at-s {
+      width: auto;
+    }
+  }
+
+  &_toc {
+    margin: 20px auto !important;
+    font-weight: 800;
+    font-size: $f-s;
+    font-family: $f-comic;
+  }
+
+  &_btn--hidden {
+    visibility: hidden;
+  }
+}

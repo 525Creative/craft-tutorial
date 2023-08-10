@@ -1,0 +1,305 @@
+.testimonial {
+
+  &_body {
+    position: relative;
+    margin-bottom: 1.25em;
+    border: 1px solid $c-testimonial-border;
+    border-radius: 6px;
+    padding: 14px 30px;
+    background-color: $c-testimonial-bg;
+    text-align: center;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -11px;
+      left: 40px;
+      width: 20px;
+      height: 20px;
+      border-bottom: 1px solid $c-testimonial-border;
+      border-left: 1px solid $c-testimonial-border;
+      background-color: $c-testimonial-bg;
+      transform: skewY(-45deg);
+    }
+  }
+
+  &_quote {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+  }
+
+  &_actions {
+    margin-bottom: 1em;
+  }
+
+  &_caption {
+    color: $c-meta;
+    font-size: $f-s;
+    text-align: center;
+  }
+
+  &_meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &_avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 1.25em;
+    border-radius: 20px;
+  }
+
+  &_name {
+    margin: 0;
+    font-weight: 600;
+    font-size: $f-l;
+  }
+
+  &_role {
+    margin: 0;
+    color: $c-testimonial-role;
+    font-size: $f-s;
+
+    a {
+      color: $c-testimonial-role;
+
+      &:hover,
+      &:focus {
+        color: $c-hover;
+      }
+    }
+  }
+
+  &_logo {
+    margin-left: 1.5em;
+  }
+
+  &--filled &_body,
+  &--filled &_body::after {
+    background-color: $c-beige-50;
+  }
+
+  @include at-xs {
+
+    &--large {
+      position: relative;
+    }
+    &--large &_body {
+      padding: 28px 60px;
+
+      &::after {
+        bottom: -14px;
+        left: 50%;
+        width: 26px;
+        height: 26px;
+        margin-left: -14px;
+        transform: rotate(-45deg);
+      }
+    }
+    &--large &_quote {
+      font-size: $f-2xl;
+
+      &::before,
+      &::after {
+        color: $c-beige-200;
+        font: normal 4.5rem/1 $f-elizeth;
+      }
+
+      &::before {
+        content: '“';
+        position: absolute;
+        top: 15px;
+        left: 20px;
+      }
+
+      &::after {
+        content: '”';
+        position: absolute;
+        right: 20px;
+        bottom: -15px;
+      }
+    }
+    &--large &_actions {
+      margin-top: 1.6em;
+      margin-bottom: 0;
+    }
+    &--large &_meta {
+      justify-content: center;
+    }
+  }
+
+
+  // Home modifier
+  &--home {
+    display: flex;
+  }
+
+  &--home &_container {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: $c-white;
+    color: $c-dark;
+    box-shadow: 0 1px 15px 0 rgba($c-blue-600, .1);
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+
+    @include at-m {
+      &:link:hover {
+        box-shadow: 0 1px 15px 0 rgba($c-blue-600, .15);
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  &--home &_logo {
+    margin: .5em 0 0;
+  }
+
+  &--home &_body {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+
+    &::after {
+      display: none;
+    }
+
+    @include at-xs {
+      padding: 28px 40px;
+    }
+  }
+
+  &--home &_quote {
+    max-width: 100%;
+    font-style: normal;
+    font-size: $f-l;
+    font-family: $f-sansserif;
+
+    &::before,
+    &::after {
+      color: $c-blue-100;
+    }
+  }
+
+  &--home &_actions {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: $f-m;
+  }
+
+  &--home &_meta {
+    flex-direction: column;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+    padding: 0 1em 1.5em;
+    color: $c-white;
+  }
+
+  &--home &_meta-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius:  0 0 10px 10px;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: -10%;
+      width: 120%;
+      height: 100%;
+      border-radius: 120% 120% 0 0;
+      background: $c-blue;
+    }
+  }
+
+  &--home &_avatar {
+    width: 48px;
+    height: 48px;
+    margin: -27px 0 .5em;
+    border: 3px solid $c-white;
+    border-radius: 27px;
+    background: $c-white;
+  }
+
+  &--home &_author {
+    text-align: center;
+  }
+
+  &--home &_avatar,
+  &--home &_name,
+  &--home &_role {
+    position: relative;
+    z-index: 2;
+  }
+
+  &--home &_name,
+  &--home &_role {
+    display: inline-block;
+  }
+
+  &--home &_name {
+    font-size: $f-m;
+  }
+
+  &--home &_role,
+  &--home &_role a {
+    color: $c-white;
+  }
+
+  &--home &_role::before {
+    content: ' // ';
+    color: rgba($c-white, .5);
+  }
+
+
+  // Customer modifiers
+  $customers: ('vsco': $c-vsco, '1password': $c-1password, 'childcare': $c-childcare, 'asana': $c-asana, 'livechat': $c-livechat, 'podia': $c-podia, 'freeagent': $c-freeagent, 'riess-group': $c-riess-group, 'middag': $c-middag, 'visual-dialogue': $c-visual-dialogue);
+
+  @each $customer, $color in $customers {
+    /* postcss-bem-linter: ignore */
+    &--#{$customer} .testimonial_meta-bg::before {
+      background: $color;
+    }
+    &--#{$customer} .testimonial_actions {
+      color: $color;
+    }
+    &--#{$customer} .testimonial_quote::before,
+    &--#{$customer} .testimonial_quote::after {
+      color: rgba($color, .1);
+    }
+  }
+
+  @include at-l {
+    &--asana .testimonial_quote {
+      max-width: 340px;
+    }
+
+    &--livechat .testimonial_quote {
+      max-width: 360px;
+    }
+  }
+}
+
+
+.testimonials {
+
+  &--no-header {
+    padding: 2em 0 3.5em;
+  }
+}

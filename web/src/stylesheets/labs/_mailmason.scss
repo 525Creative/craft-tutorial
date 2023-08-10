@@ -1,0 +1,15 @@
+/**
+ * Base styles for MailMason landing page.
+ */
+.mailmason {
+  color: color($c-mailmason, body);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: color($c-mailmason, body);
+  }
+}

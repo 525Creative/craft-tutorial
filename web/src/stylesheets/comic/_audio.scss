@@ -1,0 +1,136 @@
+.audio-section {
+  max-width: 920px;
+  margin: 0 auto 2em;
+  text-align: center;
+
+  @include at-m {
+    margin-bottom: 4em;
+  }
+
+  &_title {
+    max-width: 460px;
+    margin: 0 auto 1em;
+    padding: 0 15px;
+    font-family: $f-comic;
+  }
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  &_control {
+    width: 48px;
+    height: 44px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../../../images/comic/player-button@2x.png');
+    background-position: no-repeat;
+    background-size: 96px 132px;
+    appearance: none;
+  }
+  &_control:hover {
+    background-position: 0 -44px;
+  }
+  &_control:active {
+    background-position: 0 -88px;
+  }
+
+  &_control--pause {
+    background-position: -48px 0;
+  }
+  &_control--pause:hover {
+    background-position: -48px -44px;
+  }
+  &_control--pause:active {
+    background-position: -48px -88px;
+  }
+
+
+  &_time {
+    width: 50px;
+    font-size: 10px;
+    font-family: $f-comic;
+    text-align: center;
+  }
+}
+
+
+.audio-seeker {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 200px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  appearance: none;
+
+  @mixin track() {
+    box-sizing: border-box;
+    width: 100%;
+    height: 14px;
+    border-radius: 10px;
+    background-color: #868686;
+    cursor: pointer;
+  }
+  &::-webkit-slider-runnable-track {
+    @include track;
+  }
+  &::-moz-range-track {
+    @include track;
+    height: 8px;
+  }
+
+  @mixin progress() {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: var(--seek-before-width);
+    max-width: 194px;
+    height: 8px;
+    margin: 6px 3px;
+    border-radius: 8px 0 0 8px;
+    background-color: $c-comic-yellow;
+    cursor: pointer;
+  }
+  &::before {
+    @include progress;
+  }
+  &::-moz-range-progress {
+    @include progress;
+  }
+
+  @mixin slider-button() {
+    position: relative;
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    margin: -3px 0 0;
+    border-radius: 50%;
+    background-color: #000;
+    cursor: pointer;
+    appearance: none;
+  }
+  &::-webkit-slider-thumb {
+    @include slider-button;
+  }
+  &::-moz-range-thumb {
+    @include slider-button;
+  }
+
+  &:active::-webkit-slider-thumb {
+    transform: scale(1.1);
+  }
+  &:active::-moz-range-thumb {
+    transform: scale(1.1);
+  }
+}

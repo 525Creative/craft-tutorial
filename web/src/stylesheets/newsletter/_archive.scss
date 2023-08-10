@@ -1,0 +1,41 @@
+.archive {
+  margin: 4em 0;
+
+  &_title {
+    margin-top: 0;
+    font-weight: normal;
+    font-family: $f-elizeth;
+  }
+
+  &_items {
+    margin: 0 0 2em;
+    padding: 0;
+    list-style: none;
+  }
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include at-s {
+      flex-direction: row;
+    }
+  }
+
+  &_month {
+    color: $c-meta;
+
+    @include at-s {
+      flex: 0 0 150px;
+    }
+  }
+
+  &_link {
+    flex-grow: 2;
+  }
+}

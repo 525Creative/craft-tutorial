@@ -1,0 +1,19 @@
+columnSuffix: diwndvfe
+contentColumnType: text
+fieldGroup: 4dfc25d9-6f06-4a20-acf6-161b0bcac4e4 # Blog
+handle: summary
+instructions: 'Summaries should be one or two sentences.'
+name: Summary
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 1
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

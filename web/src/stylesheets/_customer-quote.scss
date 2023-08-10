@@ -1,0 +1,81 @@
+@use 'sass:math';
+
+/** postcss-bem-linter: define customer-quote */
+@import 'variables';
+@import 'mixins';
+
+.customer-quote {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  margin: 1.5em 0;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: $c-beige-100;
+
+  &_content {
+    align-self: center;
+
+    display: flex;
+    padding: 0 math.div($grid-gutter, 4);
+    line-height: 1.5;
+
+    &::before {
+      content: '“';
+
+      flex: 0 0 .65em;
+      align-self: flex-start;
+
+      display: none;
+      height: .5em;
+      color: $c-beige-200;
+      font-size: 80px;
+      font-family: $f-elizeth;
+      line-height: 1;
+
+      @include at-m {
+        display: block;
+      }
+    }
+
+    @include at-xl {
+      width: (grid-width(4) + math.div($grid-gutter, 2));
+    }
+  }
+  &_text {
+    color: $c-beige-700;
+    font-style: italic;
+    font-size: $f-xl;
+  }
+  &_customer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: math.div($grid-gutter, 2);
+    font-size: $f-s;
+
+    @include at-xl {
+      align-self: flex-end;
+
+      flex-direction: column;
+    }
+  }
+  &_link {
+    align-self: center;
+
+    margin-left: 35px;
+
+    @include at-xl {
+      position: relative;
+      bottom: -22px;
+      margin-left: 55px;
+      background-color: $c-white;
+      box-shadow: none;
+    }
+  }
+
+  @include at-xl {
+    flex-direction: row;
+  }
+}

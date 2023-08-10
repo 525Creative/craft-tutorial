@@ -1,0 +1,82 @@
+/* Modal
+------------------------------ */
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba($c-black, 0.8);
+  &_intro {
+    padding: 20px 0;
+  }
+  &_small {
+    display: block;
+    margin-top: 20px;
+    color: $c-meta;
+    font-style: italic;
+  }
+}
+  $w-modal: 450px;
+  .modal-container {
+    top: 30%;
+    left: 50%;
+    width: $w-modal;
+    border-radius: 3px;
+    padding: 20px;
+    background-color: $c-white;
+    text-align: center;
+  }
+  .modal-title {
+    margin-top: 0;
+  }
+  .modal-actions {
+    margin-top: 20px;
+  }
+  a.modal-close,
+  a.modal-close:link {
+    display: inline-block;
+    margin-top: 1em;
+    border-radius: 4px;
+    padding: .5em .8em;
+    background: rgba($c-black, .5);
+    color: $c-white;
+    font-weight: 500;
+    font-size: $f-s;
+    line-height: 1;
+    text-decoration: none;
+
+    span {
+      color: rgba($c-white, .3);
+    }
+  }
+
+// Large modal
+.modal--large .modal-container {
+  width: 720px;
+  max-width: calc(100% - 40px);
+}
+
+// Image modal
+
+.modal--image {
+  .modal-container {
+    width: auto;
+    max-width: calc(100% - 40px);
+    border-radius: 0;
+    padding: 0;
+    background: none;
+    font-size: 0;
+
+    img {
+      max-width: 100%;
+      max-height: calc(100vh - 80px);
+    }
+  }
+}

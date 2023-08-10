@@ -1,0 +1,266 @@
+/* Customer story stats
+------------------------------ */
+
+.customer-stats {
+  padding: 15px 0;
+  background-color: $c-mint;
+  color: $c-white;
+
+  @include at-m {
+    padding: 25px 0;
+  }
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+
+  @include at-m {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+  .stats-list_item {
+    margin: 1.25em 0;
+    vertical-align: middle;
+    font-size: $f-s;
+    text-align: center;
+
+    @include at-m {
+      width: 33%;
+      margin: 0;
+    }
+
+    span {
+      display: block;
+    }
+  }
+  .stats-list_title {
+    margin-bottom: 1em;
+    color: $c-mint-100;
+    font-weight: bold;
+  }
+  .stats-list_value {
+    font-size: $f-5xl;
+    line-height: 1;
+
+    @include at-m {
+      font-size: $f-7xl;
+      line-height: 1.3;
+    }
+  }
+
+
+/* Feature list
+------------------------------ */
+
+.feature-list {
+  margin: 0;
+
+  li {
+    display: inline-block;
+    position: relative;
+    min-width: 85px;
+  }
+}
+
+  // Icons
+
+  .feature-list_icon {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: $c-white;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-image: url('../../../images/i-features.svg');
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .feature-list_delivery::before {
+    width: 15px;
+    height: 13px;
+    background-position: 0 0;
+  }
+  .feature-list_inbound::before {
+    width: 15px;
+    height: 13px;
+    background-position: -16px 0;
+  }
+  .feature-list_opentracking::before {
+    width: 16px;
+    height: 12px;
+    background-position: -32px 0;
+  }
+  .feature-list_linktracking::before {
+    width: 15px;
+    height: 12px;
+    background-position: -48px 0;
+  }
+  .feature-list_bouncehandling::before {
+    width: 15px;
+    height: 12px;
+    background-position: -63px 0;
+  }
+  .feature-list_templates::before {
+    width: 10px;
+    height: 13px;
+    background-position: -78px 0;
+  }
+  .feature-list_messagestreams::before {
+    width: 13px;
+    height: 13px;
+    background-position: -89px 0;
+  }
+
+  // Label
+
+  .feature-list_label {
+    display: block;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: .85em;
+  }
+
+
+/* Intro text
+------------------------------ */
+
+.text-intro {
+  position: relative;
+  padding: 50px 0;
+  background-color: $c-beige-50;
+  font-size: 1.1em;
+
+  .text-section {
+    margin: 0 auto;
+  }
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/* Text sections
+------------------------------ */
+
+// TODO: replace with .text-scope?
+
+.text-section {
+  max-width: 580px;
+  margin: 60px auto;
+  border: 0;
+  padding: 0;
+  line-height: 1.6;
+
+  h2 {
+    margin: 2em 0 .5em;
+    color: $c-dark;
+    font-weight: normal;
+    font-size: 1.8125rem;  // 29px
+    line-height: 1.3;
+
+    .fonts-loaded & {
+      font-family: $f-elizeth;
+    }
+  }
+  h3 {
+    margin: 2em 0 .5em;
+    font-size: 1.2em;
+  }
+  h4 {
+    margin: 1em 0 .5em;
+    font-size: 1.1em;
+  }
+  h5 {
+    margin: 1em 0 .1em;
+    font-size: $f-m;
+  }
+  p {
+    margin: 0 0 1em;
+    font-size: $f-m;
+    line-height: 1.625;
+  }
+  strong {
+    color: $c-dark;
+  }
+  ol,
+  ul {
+    margin: .5em 0 1em 2.5em;
+    color: $c-base;
+  }
+  dl {
+    color: $c-base;
+  }
+  dt {
+    padding-bottom: .25em;
+    color: $c-dark;
+    font-weight: bold;
+  }
+  dd {
+    padding-bottom: 1.5em;
+  }
+  .author {
+    margin-top: 3.5em;
+    padding-left: 38px;
+    color: $c-grey-400;
+    line-height: 1.4;
+  }
+  .btn-signup {
+    margin-top: 3em;
+  }
+  .screenshot {
+    margin: 2em 0;
+
+    @include at-xl {
+      margin-right: -50px;
+      margin-left: -50px;
+    }
+  }
+}
+  .callout-quote {
+    position: relative;
+    margin: 1.75em 0 1.6em;
+    padding-left: 25px;
+    font-style: italic;
+    font-size: $f-xl;
+    line-height: 1.5;
+
+    @include at-m {
+      font-size: $f-3xl;
+    }
+
+    :first-child::before {
+      content: '“';
+      position: absolute;
+      top: -12px;
+      left:0;
+      color: $c-mint;
+      font-size: $f-5xl;
+    }
+
+    .name {
+      margin-top: -10px;
+      font-size: $f-s;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  }

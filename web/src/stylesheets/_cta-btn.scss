@@ -1,0 +1,347 @@
+/** postcss-bem-linter: define cta-btn */
+
+@import 'variables';
+
+.cta-btn,
+.scope-text .cta-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: grid-width(3);
+  border: none;
+  border-radius: 4px;
+  padding: .45em .875em;
+  background: none;
+  box-shadow: 0 0 0 1px rgba($c-black, .1) inset;
+  font-size: $f-m;
+  font-family: $f-sansserif;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .25s;
+
+  &:hover:not(:disabled) {
+    background-color: $c-yellow;
+    box-shadow: 0 0 0 1px rgba($c-black, .2) inset;
+  }
+
+  &:link,
+  &:visited {
+    color: $c-page-tc;
+  }
+
+  &:active,
+  &:hover:not(:disabled) {
+    color: $c-black;
+  }
+
+  &:disabled,
+  &[disabled] {
+    opacity: .5;
+    cursor: default;
+  }
+
+  &--default {
+    background-color: $c-blue;
+    color: $c-page-bg;
+    font-weight: bold;
+  }
+  &--default:link,
+  &--default:visited {
+    color: $c-page-bg;
+    text-shadow: 0 1px 1px $c-blue-700;
+  }
+
+  &--default:active,
+  &--default:hover:not(:disabled) {
+    background-color: $c-blue-700;
+    color: $c-page-bg;
+  }
+
+  &--small {
+    font-weight: bold;
+    font-size: $f-xs;
+    text-transform: uppercase;
+  }
+
+  &--medium {
+    padding: .7em 1.4em;
+  }
+
+  &--large {
+    padding: .8em 1.6em;
+  }
+
+  &--huge {
+    border-radius: 6px;
+    padding: .5em 2em;
+    font-weight: bold;
+    font-size: $f-3xl;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &--fill-h {
+    width: 100%;
+    max-width: none;
+  }
+
+  &--ghost {
+    color: $c-blue;
+    box-shadow: 0 0 0 1px rgba($c-blue, .2) inset;
+
+    &:link,
+    &:visited {
+      color: $c-blue;
+    }
+
+    &:hover:not(:disabled) {
+      background: rgba($c-blue, .1);
+      color: $c-blue;
+      box-shadow: 0 0 0 1px rgba($c-blue, .3) inset;
+    }
+  }
+
+  &--dark {
+    background: $c-dark;
+    color: $c-white;
+    font-weight: bold;
+
+    &:link,
+    &:visited {
+      color: $c-white;
+    }
+
+    &:hover:not(:disabled) {
+      background: $c-grey-900;
+      color: $c-white;
+    }
+  }
+
+  &--dmarc {
+    border-color: transparent;
+    background: $c-dd-btn-primary;
+    color: $c-white;
+    font-weight: bold;
+
+    &:link,
+    &:visited {
+      color: $c-white;
+    }
+
+    &:hover:not(:disabled) {
+      background: darken($c-dd-btn-primary, 10%);
+      color: $c-white;
+    }
+  }
+
+  &--warning {
+    background: $c-red;
+    color: $c-white;
+    font-weight: bold;
+
+    &:link,
+    &:visited {
+      color: $c-white;
+    }
+
+    &:hover:not(:disabled) {
+      background: $c-red-700;
+      color: $c-white;
+    }
+
+    &.cta-btn--small {
+      text-transform: none;
+    }
+
+    &.cta-btn--ghost {
+      background: transparent;
+      color: $c-red;
+      box-shadow: inset 0 0 0 1px rgba($c-red, .2);
+
+      &:link,
+      &:visited {
+        color: $c-red;
+      }
+
+      &:hover:not(:disabled) {
+        background: $c-red;
+        color: $c-white;
+        box-shadow: inset 0 0 0 1px rgba($c-red-700, .2);
+      }
+    }
+  }
+
+  &--footer {
+    background: transparent;
+    color: $c-meta;
+    box-shadow: 0 0 0 1px rgba($c-white, .15) inset;
+    font-weight: bold;
+
+    &:link,
+    &:visited {
+      color: $c-meta;
+    }
+
+    &:hover:not(:disabled) {
+      background: $c-slate-900;
+      color: $c-white;
+    }
+  }
+
+  &--inverted {
+    background: transparent;
+    color: $c-white;
+    box-shadow: 0 0 0 1px rgba($c-white, .2) inset;
+    font-weight: bold;
+
+    &:link,
+    &:visited {
+      color: $c-white;
+    }
+
+    &:hover:not(:disabled) {
+      background: rgba($c-white, .2);
+      color: $c-white;
+      box-shadow: 0 0 0 1px rgba($c-white, .4) inset;
+    }
+  }
+
+  &--arrow {
+    position: relative;
+    padding-right: 30px;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: calc(50% - 7px);
+      right: 7px;
+      width: 1em;
+      height: 1em;
+      background: url('../../images/arrow-small.svg') right center/100% auto no-repeat;
+    }
+    &:hover::after {
+      background-image: url('../../images/arrow-small--active.svg');
+    }
+  }
+
+  &--new-tab {
+    position: relative;
+    padding-right: 28px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 5px);
+      right: 10px;
+      width: 13px;
+      height: 13px;
+      background: url('../../images/i-new-tab@2x.png') right center/100% auto no-repeat;
+    }
+  }
+
+  &--huge &_label {
+    display: block;
+
+    /* postcss-bem-linter: ignore */
+    .fonts-loaded & {
+      font-family: $f-elizeth;
+    }
+  }
+
+  &--huge &_sub-label {
+    display: block;
+    opacity: .7;
+    font-size: $f-xs;
+  }
+
+  &--meta:link,
+  &--meta:visited {
+    color: $c-meta;
+  }
+
+  &--github {
+    position: relative;
+    padding-left: 2.4em;
+    color: $c-grey;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: .8em;
+      width: 18px;
+      height: 16px;
+      margin-top: -8px;
+      background: center / contain no-repeat url('../../images/labs/octocat@2x.png');
+    }
+  }
+  &--github:link,
+  &--github:visited {
+    color: $c-grey;
+  }
+  &--github:hover:not(:disabled) {
+    background-color: $c-grey-50;
+    color: $c-grey;
+    box-shadow: 0 0 0 1px rgba($c-black, .2) inset;
+  }
+
+  &--download {
+    position: relative;
+    padding-left: 2.4em;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: .8em;
+      width: 18px;
+      height: 16px;
+      margin-top: -7px;
+      background: center / contain no-repeat url('../../images/labs/download-icon@2x.png');
+    }
+  }
+
+  &--tweet {
+    position: relative;
+    padding-left: 2.4em;
+    background: $c-twitter;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: .8em;
+      width: 18px;
+      height: 14px;
+      margin-top: -7px;
+      background: center / contain no-repeat url('../../images/twitter.svg');
+      filter: brightness(100);
+    }
+  }
+  &--tweet:link,
+  &--tweet:visited {
+    color: $c-white;
+  }
+  &--tweet:hover:not(:disabled) {
+    background: darken($c-twitter, 10%);
+    color: $c-white;
+  }
+
+  &--ac {
+    box-shadow: 0 0 0 1px rgba($c-ac-blue, 1) inset;
+    font-weight: bold;
+  }
+  &--ac:hover:not(:disabled) {
+    background-color: $c-ac-blue;
+    color: #FFF;
+    box-shadow: 0 0 0 1px $c-ac-blue inset;
+  }
+}

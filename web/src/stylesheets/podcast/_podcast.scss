@@ -1,0 +1,57 @@
+.subscribe-badge {
+  height: 38px;
+
+  &--small {
+    height: 34px;
+  }
+}
+
+.podcast-share {
+  margin: 60px 0 40px;
+}
+
+.subscribe-banner {
+  padding: 10px 0;
+  background-color: $c-slate-800;
+  -webkit-font-smoothing: antialiased;
+
+  .u-container {
+    @include at-m {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .share:first-of-type {
+    margin-bottom: 20px;
+
+    @include at-m {
+      margin-bottom: 0;
+    }
+  }
+
+  .share:first-of-type .share_item:first-child {
+    font-size: 0;
+  }
+
+  .share_item:first-child {
+    padding-left: 0;
+
+    @include at-m {
+      padding-left: 16px;
+    }
+  }
+
+  .share_label {
+    display: none;
+
+    @include at-m {
+      display: block;
+    }
+  }
+
+  .share_divider {
+    border-color: $c-slate-600;
+  }
+}

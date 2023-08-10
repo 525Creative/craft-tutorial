@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+/**
+ * Component for creating content boxes with a drop-shadow.
+ */
+.box {
+  margin-top: math.div($grid-gutter, 2);
+  border-radius: 10px;
+  padding: math.div($grid-gutter, 2);
+  background-color: $c-white;
+  box-shadow: 0 0 15px rgba($c-black, .1);
+
+  @include at-m {
+    margin-top: $grid-gutter;
+  }
+
+  &_pre-text {
+    margin: 0 0 .3em;
+    color: $c-meta;
+    font-weight: 500;
+    font-size: $f-s;
+    text-transform: uppercase;
+
+    &--success {
+      color: $c-mint;
+    }
+  }
+
+  &_title {
+    margin: 0 0 .75em;
+    font-weight: normal;
+    font-size: $f-6xl;
+    font-family: $f-elizeth;
+  }
+
+  &--no-margin {
+    margin: 0;
+  }
+
+  &--bordered {
+    border: 3px solid $c-grey-100;
+    box-shadow: none;
+  }
+}

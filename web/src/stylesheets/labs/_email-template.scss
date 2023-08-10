@@ -1,0 +1,141 @@
+/**
+ * Email template block for labs landing page.
+ */
+.email-template {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border-radius: 10px;
+  padding: 20px 25px;
+  background-color: #FFF;
+  box-shadow: 0 0 8px rgb(0 0 0 / 5%);
+
+  @include at-m {
+    padding: 25px 30px;
+  }
+
+  &_preview {
+    display: block;
+    position: relative;
+    margin-top: 4px;
+    margin-right: 1em;
+
+    @include at-m {
+      margin-right: 1.5em;
+    }
+
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &_icon {
+    width: 40px;
+
+    @include at-m {
+      width: 60px;
+    }
+  }
+
+  &_title {
+    margin: 0;
+    font-size: $f-xl;
+
+    @include at-m {
+      // font-size: $f-2xl;
+    }
+  }
+
+  &_desc {
+    margin: 6px 0 0;
+    color: $c-grey;
+    font-size: .9375rem; // 15px
+  }
+
+  &_new {
+    display: inline-block;
+    position: relative;
+    border-radius: 2px;
+    padding: 1px 5px;
+    vertical-align: 2px;
+    background-color: #7576D0;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 11px;
+  }
+
+  &_new::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: -25px;
+    width: 38px;
+    height: 40px;
+    background-image: url('../../../images/sparkles.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transform: rotate(-180deg);
+  }
+
+  &--mailmason &_new::before {
+    display: none;
+  }
+
+
+  /**
+   * MailMason modifier
+   */
+  &--mailmason {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &--mailmason &_desc {
+    margin: 0;
+    color: color($c-mailmason, meta);
+  }
+
+  /**
+   * Small modifier
+   */
+  &--small {
+    margin-bottom: 1.5em;
+
+    @include at-m {
+      margin-bottom: 0;
+    }
+  }
+
+  &--small &_title {
+    font-size: $f-l;
+  }
+
+  &--small &_preview {
+    width: 32px;
+    margin-right: 1.125em;
+
+    img {
+      width: 32px;
+    }
+
+    &::before {
+      background-position: center 1px;
+      background-size: 30px auto;
+    }
+  }
+
+  &--small &_desc {
+    font-size: $f-s;
+  }
+
+  &--small &_download,
+  &--small &_guide {
+    display: none;
+  }
+}

@@ -1,0 +1,159 @@
+.resource-lists {
+  margin: 1em 0 .5em;
+
+  @include at-m {
+    margin: 2em 0 1.5em;
+  }
+}
+
+
+.resource-list {
+
+  &--pad {
+    margin-bottom: 1.5em;
+
+    @include at-s {
+      margin-bottom: 40px;
+    }
+  }
+
+  &--related {
+    margin-bottom: 2em;
+
+    @include at-s {
+      margin-bottom: 4em;
+    }
+  }
+
+  &_title {
+    margin-bottom: .2em;
+    font-weight: normal;
+    font-family: $f-elizeth;
+    line-height: 1.2;
+  }
+
+  &_sub-title {
+    margin: 0;
+    color: $c-meta;
+  }
+
+  &_items {
+    padding: 0;
+    color: $c-resource-list-accent;
+    list-style: none;
+
+    @include at-m {
+      padding-right: 30px;
+      list-style: square;
+    }
+  }
+  &--pad &_items {
+    margin-bottom: 0;
+  }
+
+  &_item {
+    position: relative;
+    margin: 0 0 .5em;
+    border-bottom: 1px dashed $c-grey-100;
+    padding: .25em 0 .75em;
+    line-height: 1.4;
+
+    @include at-m {
+      border-bottom: none;
+      padding: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+  &_item--hidden {
+    display: none;
+
+    .no-js & {
+      display: list-item;
+    }
+  }
+  &_items--expanded &_item--hidden {
+    display: list-item;
+  }
+
+  &_link,
+  &_link:link {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  &_item--highlight &_link {
+    margin-left: -.3em;
+    padding: .2em .3em;
+    background-color: $c-entry-featured-bg;
+  }
+
+  &_desc {
+    margin: .25em 0 0;
+    color: $c-meta;
+    font-size: $f-s;
+  }
+
+  &_icon {
+    float: left;
+    width: 48px;
+  }
+
+  &_body {
+    margin-left: 48px;
+    padding-left: .8em;
+  }
+
+  &_footer {
+    font-size: $f-s;
+
+    a {
+      color: $c-dark;
+      text-decoration: none;
+
+      &:hover {
+        color: $c-blue-700;
+      }
+    }
+  }
+
+  &_more-label,
+  &_less-label {
+    font-weight: 500;
+  }
+
+  &_less-label {
+    display: none;
+  }
+
+  &_items--expanded + &_footer &_less-label {
+    display: block;
+  }
+
+  &_items--expanded + &_footer &_more-label {
+    display: none;
+  }
+
+
+  /* Icons
+  ------------------------------------------- */
+  &--icons &_items {
+    list-style: none;
+  }
+
+  &--icons &_item {
+    margin-bottom: 1em;
+  }
+
+  &--icons &_link,
+  &--icons &_link:link {
+    color: $c-dark;
+    font-weight: 500;
+  }
+}

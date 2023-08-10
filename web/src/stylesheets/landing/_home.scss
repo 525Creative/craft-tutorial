@@ -1,0 +1,287 @@
+/* Buttons
+------------------------------------------------- */
+
+@use 'sass:math';
+
+.btn-blue {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1em 4em;
+  background-color: $c-blue;
+  color: $c-white !important;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $c-blue-700;
+  }
+  &:active {
+    background-color: $c-blue-800;
+  }
+  span {
+    display: block;
+    margin-top: .3em;
+    color: $c-blue-300;
+    font-size: .75em;
+  }
+}
+
+/* Customers section
+------------------------------------------------- */
+
+.section-customers {
+  padding: 5px 0;
+  background-color: $c-beige-50;
+}
+
+
+/* Troubleshoot
+------------------------------------------------- */
+
+.section-troubleshoot {
+  padding-bottom: 0;
+  overflow: hidden;
+
+  .title-section {
+    margin-top: 1em;
+  }
+  .screenshot {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+
+    img {
+      border-radius: 0;
+    }
+
+    @include at-m {
+      width: 700px;
+      margin-right: (grid-width(3) - 700px);
+    }
+  }
+}
+
+
+/* Statistics
+------------------------------------------------- */
+
+.section-stats {
+  background-color: $c-mint;
+}
+
+  .section-stats_text {
+    color: $c-mint-200;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+    .title-section,
+    .title-unit {
+      color: $c-white;
+    }
+
+    @include at-m {
+      order: 2;
+    }
+  }
+  .section-stats_screen {
+    figure {
+      max-width: 437px;
+      border: 3px solid $c-mint-400;
+      border-radius: 8px;
+    }
+
+    @include at-m {
+      order: 1;
+
+      margin-top: 0;
+    }
+  }
+
+
+
+/* Inbound
+------------------------------------------------- */
+
+.section-inbound {
+  padding-top: 0;
+  text-align: center;
+
+  .title-section {
+    margin-top: 1em;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.inbound-scheme-wrap {
+  width: 301px;
+  height: 55px;
+  margin: 1.75em auto;
+  overflow: hidden;
+
+  @include at-m {
+    width: 602px;
+    height: 110px;
+  }
+}
+
+.inbound-scheme {
+  position: relative;
+  width: 602px;
+  height: 70px;
+  margin: 0 auto;
+  padding-top: 40px;
+  overflow: hidden;
+  background: url('../../../images/i-inbound.svg') repeat-x 0 100px;
+  background-size: 349px 88px;
+  transform: scale(.5);
+  transform-origin: 0 0;
+
+  .b-email,
+  .b-json,
+  .b-claw,
+  .b-pm {
+    position: absolute;
+    background: url('../../../images/i-inbound.svg') no-repeat 0 0;
+    background-size: 349px 88px;
+  }
+  .b-email {
+    top: -70px;
+    left: 7px;
+    width: 45px;
+    height: 29px;
+    background-position: -89px -12px;
+  }
+  .b-json {
+    top: 59px;
+    left: 280px;
+    width: 46px;
+    height: 39px;
+    background-position: -89px -42px;
+  }
+  .b-claw {
+    top: -77px;
+    right: 0;
+    width: 62px;
+    height: 77px;
+    background-position: -136px -11px;
+  }
+  .b-pm {
+    top: 40px;
+    left: 257px;
+    width: 88px;
+    height: 70px;
+    background-position: 0 -11px;
+  }
+
+  @include at-m {
+    transform: none;
+  }
+}
+
+/* Security
+------------------------------------------------- */
+
+.section-security {
+  text-align: center;
+}
+  .section-security_map {
+    margin-top: 2em;
+    padding-top: 42.5%;
+    background: url('../../../images/map.svg') no-repeat 50% 0;
+    background-size: 80%;
+
+    @include at-m {
+      padding-top: 300px;
+    }
+  }
+    .section-security_features {
+      img {
+        height: 65px;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+
+/* API
+------------------------------------------------- */
+
+.section-api {
+  background-color: $c-yellow;
+  color: $c-hero-text;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/* Call to action mid
+------------------------------------------------- */
+
+.section-cta-mid {
+  margin: 10px 0;
+  padding: math.div($grid-gutter, 2) 0;
+  background-color: $c-blue;
+  color: $c-white;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    height: 25px;
+    background-image: url('../../../images/stamp-pattern.svg');
+    background-repeat: repeat-x;
+  }
+  &::before {
+    top: -10px;
+    right: 0;
+    left: 0;
+    background-position: top;
+  }
+  &::after {
+    right: 0;
+    bottom: -10px;
+    left: 0;
+    background-position: bottom;
+  }
+
+  .title-section {
+    margin: -.25em 0 .75em;
+    color: inherit;
+    line-height: 1;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @include at-m {
+      margin: 0;
+    }
+  }
+}
+
+
+/* Wildbit section
+------------------------------------------------- */
+
+.section-wildbit {
+  background-color: $c-white;
+
+  .title-section {
+    text-align: center;
+  }
+
+  .btn-blue {
+    margin-top: 2em;
+  }
+}

@@ -1,0 +1,47 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 4dfc25d9-6f06-4a20-acf6-161b0bcac4e4 # Blog
+handle: featureImage
+instructions: null
+name: 'Feature Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: true
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:966a7d4b-62d2-4770-be0b-3da984dfbc19' # Images
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: true
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:966a7d4b-62d2-4770-be0b-3da984dfbc19' # Images
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+  selectionLabel: null
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,26 @@
+.badge {
+  display: inline-block;
+  margin-left: 2px;
+  border-radius: 2px;
+  padding: 3px 4px;
+  vertical-align: 3px;
+  font-size: $f-xs;
+  line-height: 1;
+  text-align: center;
+
+  &--success {
+    background: $c-mint;
+    color: $c-white;
+    font-weight: bold;
+    font-size: $f-s;
+    text-shadow: 0 1px 1px rgba($c-black, .2);
+  }
+
+  &--new {
+    vertical-align: 1px;
+    background-color: $c-badge-new;
+    color: $c-white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

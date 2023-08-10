@@ -1,0 +1,81 @@
+/* icon-list
+------------------------------------------------- */
+
+.icon-list {
+  padding: 4em 0;
+
+  &--no-header {
+    padding-top: 0;
+  }
+
+  &_header {
+    max-width: 720px;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    text-align: center;
+
+    @include at-m {
+      margin-bottom: 0;
+    }
+  }
+
+  &_header + &_items {
+    margin-top: -1em;
+  }
+
+  &_title {
+    margin: 0;
+    font: 400 #{$f-2xl}/1.3 $f-elizeth;
+
+    @include at-s {
+      font-size: $f-5xl;
+    }
+  }
+
+  &_headline {
+    margin: 1.3em 0 .3em;
+    font-weight: bold;
+    font-size: $f-xl;
+    line-height: 1.4;
+  }
+
+  &_desc {
+    margin: 1.3em 0 0;
+    line-height: 1.6;
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &_headline + &_desc {
+    margin: 0;
+  }
+
+  &_items {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+  }
+
+  &--left-align &_items {
+    text-align: left;
+  }
+
+  + .section--beige-highlight,
+  + .section--blue-highlight {
+    padding-top: 0;
+  }
+
+  &--meetups {
+    padding: 0;
+
+    .icon-list_headline {
+      margin: .3em 0 0;
+      font-weight: normal;
+    }
+  }
+}

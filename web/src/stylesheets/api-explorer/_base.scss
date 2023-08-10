@@ -1,0 +1,207 @@
+@use 'sass:math';
+
+.api-toggle {
+  margin: 0;
+  padding: 0;
+}
+  .api-toggle_item {
+    display: inline;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .api-toggle_link {
+    display: inline-block;
+    border: 2px solid $c-yellow-400;
+    border-radius: 4px;
+    padding: 8px 15px;
+    color: $c-yellow-600 !important;
+    font-size: $f-l;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $c-yellow-200;
+    }
+    &:active {
+      background-color: $c-yellow-300;
+    }
+    .api-toggle_item--active & {
+      border-color: $c-blue;
+      background-color: $c-blue;
+      color: $c-white !important;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+
+
+/* Token instructions
+------------------------------ */
+
+.token-instructions {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 44px auto 0;
+  border: 3px solid $c-beige-100;
+  border-radius: 4px;
+  padding: 25px;
+
+  @include at-m {
+    width: 818px;
+  }
+}
+  .token-instructions_text {
+    margin-bottom: 0;
+    line-height: 1.625;
+
+    code {
+      border: 1px solid $c-slate-100;
+      border-radius: 3px;
+      padding: 0 .25em;
+      font-size: $f-s;
+    }
+  }
+
+  .token-instructions_title {
+    margin: 0 0 -.25em;
+    font-size: $f-xl;
+    line-height: 1.2;
+  }
+
+
+/* Overrides
+------------------------------ */
+
+.snippet,
+.response .block {
+  margin-bottom: 0;
+  background-color: $c-grey-50;
+}
+
+// Method labels
+
+.heading.toggleOperation.is-active,
+.content {
+  .get & {
+    background-color: $c-blue-100;
+  }
+  .put & {
+    background-color: $c-beige-100;
+  }
+  .post & {
+    background-color: $c-mint-100;
+  }
+  .delete & {
+    background-color: $c-red-100;
+  }
+}
+.heading.toggleOperation.is-active {
+  border-bottom: 1px dashed rgba($c-black, .1) !important;
+}
+
+// Try buttons
+
+@mixin try-button($color) {
+  background-color: $color !important;
+
+  &:hover {
+    background-color: darken($color, 5%) !important;
+  }
+  &:active {
+    background-color: darken($color, 12%) !important;
+  }
+}
+
+.try-button,
+.sandbox_header .submit {
+  .post & {
+    @include try-button($color: $c-explorer-post);
+  }
+  .put & {
+    @include try-button($color: $c-explorer-put);
+  }
+  .delete & {
+    @include try-button($color: $c-explorer-delete);
+  }
+}
+
+// Swagger stuff
+
+.swagger-section {
+  min-height: 1000px;
+
+  .swagger-ui-wrap {
+    li.resource ul.endpoints li.endpoint ul.operations li.operation div.heading h3 span.path a {
+      font-size: $f-s;
+      font-family: $f-monospace !important;
+    }
+    ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation div.content > h4:first-child {
+      padding-top: 0;
+    }
+    table thead tr th {
+      border-bottom: 1px solid rgba($c-black, 0.05);
+      padding: 10px 10px 12px 0;
+      color: $c-dark;
+      font-weight: bold;
+    }
+    table td {
+      padding-top: 12px !important;
+    }
+    .operation-params .code {
+      width: 20%;
+      padding-top: 15px !important;
+    }
+    input.parameter {
+      width: 100% !important;
+    }
+    table tbody tr td {
+      padding-right: 20px !important;
+    }
+    table tbody tr td:last-child {
+      padding-right: 0 !important;
+    }
+    .operation-params td:last-child {
+      width: 20%;
+    }
+    .response {
+      margin: 20px -20px 0;
+      border-top: 1px dashed rgba($c-black, .1);
+      padding: 5px 20px 0;
+    }
+  }
+}
+
+
+/* Endpoint loading state
+------------------------------ */
+
+.response_throbber {
+  position: relative;
+  background-image: none !important;
+
+  &::before {
+    content: ' ';
+
+    position: absolute;
+    top: 61px;
+    left: 15px;
+    z-index: 90;
+    width: 20px;
+    height: 20px;
+    margin-top: -50px;
+    margin-left: math.div(-50px, 2);
+    border-width: 2px;
+    border-style: solid;
+    border-color: $c-blue $c-blue $c-blue transparent;
+    border-radius: 100%;
+    animation: spin 500ms infinite linear;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

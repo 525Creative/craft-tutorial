@@ -1,0 +1,44 @@
+/** postcss-bem-linter: define nav-mobile */
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  left: 5px;
+  z-index: 1060; // Sit above Beacon
+  border-radius: 4px;
+  padding: 25px 15px;
+  background-color: $c-white;
+  box-shadow: 0 0 10px rgba($c-black, .25);
+
+  &_extras {
+    margin: 15px -15px 0;
+    border-top: 1px solid $c-grey-100;
+    padding: 25px 25px 0;
+  }
+
+  &_login {
+    margin: 0;
+    padding-top: 1em;
+    color: $c-dark;
+    font-size: $f-m;
+    text-align: center;
+  }
+
+  &_logo {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+  }
+
+  .cta-btn {
+    display: block;
+    max-width: none;
+    text-align: center;
+  }
+
+  &.is-active {
+    display: block;
+  }
+}

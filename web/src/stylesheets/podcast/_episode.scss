@@ -1,0 +1,192 @@
+/**
+ * Podcast episode tiles.
+ */
+.episode {
+  margin: 0 0 20px;
+  border: 1px solid $c-slate-700;
+  border-radius: 10px;
+  color: $c-meta;
+
+  @include at-s {
+    margin: 0 0 40px;
+  }
+
+  &_container {
+    padding: 20px;
+
+    @include at-s {
+      padding: 40px;
+    }
+  }
+
+  &_number {
+    font-size: $f-m;
+  }
+
+  &_title {
+    margin: .5em 0;
+    color: $c-white;
+    font-weight: normal;
+    font-size: $f-2xl;
+    font-family: $f-elizeth;
+    line-height: 1.2;
+
+    a {
+      color: currentColor;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &_summary a {
+    color: $c-meta;
+
+    &:hover,
+    &:focus {
+      color: $c-yellow;
+    }
+  }
+
+  &_player {
+    margin-top: 20px;
+  }
+
+  &_footer {
+    padding: 15px 20px;
+
+    @include at-s {
+      padding: 15px 40px;
+    }
+  }
+
+  /**
+   * Featured
+   */
+  &--featured {
+    border: 0;
+    background: $c-grey-50;
+    color: $c-base;
+    box-shadow: 0 0 25px 0 $c-slate-900;
+  }
+
+  &--featured &_container {
+    border-radius: 10px;
+    background: $c-white;
+    box-shadow: 0 0 25px 0 rgba($c-slate-900, .1);
+
+    @include at-s {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  &--featured &_number {
+    color: $c-meta;
+  }
+
+  &--featured &_title {
+    color: $c-dark;
+
+    @include at-s {
+      font-size: $f-7xl;
+    }
+  }
+
+  &--featured &_summary a {
+    color: $c-blue;
+
+    &:hover,
+    &:focus {
+      color: $c-blue-800;
+    }
+  }
+
+  &--featured &_footer {
+    display: none;
+    font-size: $f-m;
+
+    @include at-s {
+      display: block;
+    }
+  }
+}
+
+
+/**
+ * Episode meta component.
+ *
+ * Used for podcast tile links and meta information.
+ */
+.episode-meta {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include at-s {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &_item {
+    margin-bottom: .8em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include at-s {
+      margin-bottom: 0;
+    }
+  }
+
+  &_link {
+    color: $c-base;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $c-base;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &--listen {
+      color: $c-yellow;
+      font-weight: 500;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        width: 22px;
+        height: 22px;
+        margin-right: 8px;
+        vertical-align: middle;
+        background: url('../../../images/icons/podcast-play.svg') no-repeat;
+        background-size: 100% 100%;
+      }
+
+      &:link,
+      &:visited {
+        color: $c-yellow;
+      }
+    }
+  }
+
+  &--secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &--secondary &_item {
+    margin-bottom: 0;
+  }
+}

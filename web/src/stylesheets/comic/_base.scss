@@ -1,0 +1,336 @@
+$f-default: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$f-comic-title: ultra, $f-default;
+$f-comic-sans-serif: roc-grotesk, $f-default;
+$f-comic-sans-serif-wide: roc-grotesk-wide,  $f-default;
+$f-comic: ccmeanwhile, $f-default;
+
+$c-comic-pink: #EA937C;
+$c-comic-green: #27BD82;
+$c-comic-yellow: #F0B64A;
+$c-comic-tan: #E8CAA3;
+$c-twitter-blue: #1DA1F2;
+
+body {
+  background-color: $c-comic-tan;
+  color: #000;
+  font: normal 1em/1.5 $f-comic-sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: #000;
+  text-decoration-color: $c-comic-green;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+a:hover {
+  text-decoration-color: $c-comic-pink;
+}
+
+
+::selection {
+  background: $c-comic-pink;
+}
+
+.postmark-logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  img {
+    width: 60px;
+  }
+
+  &:hover {
+    animation: wave 450ms infinite;
+  }
+}
+
+
+.header {
+  position: relative;
+  height: 370px;
+  background-image: url('../../../images/comic/header@2x.png');
+  background-repeat: repeat-x;
+  background-position: center top;
+  background-size: 1750px 350px;
+  text-align: center;
+}
+
+.header-slim {
+  position: relative;
+  background-repeat: repeat-x;
+  text-align: center;
+
+  &_container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 10px;
+
+    @include at-m {
+      flex-flow: row;
+    }
+  }
+
+  &--jtti {
+    height: 248px;
+    background-image: url('../../../images/comic/header-jtti@2x.png');
+    background-position: 795px -50px;
+    background-size: 1750px 298px;
+
+    @include at-m {
+      height: 200px;
+      background-position: center -98px;
+    }
+  }
+
+  &--rr {
+    height: 265px;
+    background-image: url('../../../images/comic/header-rr@2x.png');
+    background-position: 500px bottom;
+    background-size: 1200px 153px;
+
+    @include at-m {
+      background-position: center bottom;
+      background-size: 1750px 223px;
+    }
+  }
+
+  &--ddd {
+    height: 460px;
+    background-color: #85B1C9;
+    background-image: url('../../../images/comic/header-ddd@2x.png');
+    background-position: center bottom;
+    background-size: 1449px 250px;
+
+    @include at-m {
+      height: 302px;
+      background-size: 1750px 302px;
+    }
+  }
+
+  &--ddd &_container {
+    @include at-m {
+      padding-top: 50px;
+    }
+  }
+
+  &--ddd a {
+    text-decoration-color: $c-comic-yellow;
+  }
+}
+
+
+.credits {
+  margin-top: 70px;
+  font-family: $f-comic;
+
+  p,
+  h3 {
+    font-size: $f-m !important;
+  }
+
+  &_title {
+    margin: 0 0 5px;
+    color: $c-comic-pink;
+    text-align: center;
+  }
+  &_name,
+  &_main {
+    margin: 0;
+    text-align: center;
+  }
+  &_main {
+    margin-bottom: 60px;
+  }
+  &_row {
+    margin-bottom: 30px;
+  }
+  &_cta {
+    margin-bottom: 70px;
+  }
+
+  &--panel {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  // Ruthy Redemption
+
+  &--rr {
+    margin-top: 50px;
+
+    @include at-m {
+      margin-top: 80px;
+    }
+  }
+
+  &--rr &_row {
+    margin-bottom: 0;
+  }
+
+  &--rr .u-grid {
+    flex-flow: column;
+
+    @include at-m {
+      flex-flow: row;
+    }
+  }
+
+  &--rr .u-grid-cell {
+    margin-bottom: 20px;
+  }
+
+  &--rr &_title {
+    color: #000;
+    opacity: .22;
+  }
+
+  &--rr &_end {
+    margin-bottom: 40px;
+    transform: rotate(-5deg);
+    filter: grayscale(1);
+  }
+
+
+  // Dun dun dunning
+
+  &--ddd {
+    margin-top: 30px;
+  }
+
+  &--ddd &_row {
+    margin-bottom: 10px;
+  }
+
+  &--ddd &_end {
+    margin-bottom: 10px;
+    transform: rotate(-5deg);
+  }
+
+  &--ddd &_title {
+    color: #000;
+    opacity: .3;
+  }
+}
+
+.badge {
+  display: inline-block;
+  margin: 0;
+  border-radius: 3px;
+  padding: 1px 4px 0;
+  background-color: $c-comic-yellow;
+  color: #000;
+  font-weight: 900;
+  font-size: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pm {
+  margin-top: 30px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: $f-m;
+  font-family: $f-comic;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #000;
+  color: $c-comic-tan;
+  font-style: normal;
+  font-weight: 800;
+  font-size: $f-s;
+  font-family: $f-comic;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: $c-comic-yellow;
+  color: #000;
+}
+
+.tweet {
+  text-decoration-color: $c-twitter-blue;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    margin-left: 8px;
+    vertical-align: -.1em;
+    background-color: $c-twitter-blue;
+    transition: all .3s;
+    mask: url('../../../images/icons/twitter.svg') 0 50% no-repeat;
+  }
+}
+
+.actions {
+  margin-top: 1.5em;
+
+  a {
+    display: block;
+    padding: 0 10px;
+
+    @include at-s {
+      display: inline-block;
+    }
+  }
+}
+
+.micro {
+  font-size: 9px;
+}
+
+.the-end {
+  margin: 25px auto;
+  text-align: center;
+
+  img {
+    width: 95%;
+  }
+
+  @media only screen and (min-width: 800px) {
+    margin: 25px -120px;
+
+    img {
+      width: 100%;
+      max-width: 800px;
+    }
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

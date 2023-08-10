@@ -1,0 +1,149 @@
+/* Regular divider
+------------------------------------------------- */
+.divider {
+  position: relative;
+  margin: 1.6em 0;
+  overflow: visible;
+  background-color: $c-beige-100;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    width: 52px;
+    height: 52px;
+    margin-left: -26px;
+    background: no-repeat 50% 50% / 20px 20px url('../../images/logo-stamp@2x.png') $c-page-bg;
+  }
+
+  &--blank {
+    margin: .25em 0;
+    background: none;
+  }
+  &--blank::before {
+    display: none;
+  }
+
+  &--beige {
+    height: 1px;
+    background-color: $c-beige-200;
+  }
+  &--beige::before {
+    display: none;
+  }
+
+  &--grey {
+    margin: 0;
+    background: $c-grey-50;
+  }
+  &--grey::before {
+    display: none;
+  }
+
+  &--grey-light {
+    margin: 0;
+    background: $c-grey-100;
+  }
+  &--grey-light::before {
+    display: none;
+  }
+
+  &--blue-grad {
+    margin: 0;
+    background: $c-blue-50;
+    background-image: linear-gradient(-225deg, rgba($c-blue-50, .5) 0%, $c-blue-50 100%);
+    box-shadow: 0 0 50px 0 rgba($c-blue-200, .3) inset;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &--thin {
+    height: 1px;
+  }
+
+  &--regular {
+    height: 3px;
+  }
+
+  &--thick {
+    height: 1em;
+  }
+
+  &--cta {
+    position: relative;
+    margin: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      border-top: 1px solid $c-grey-100;
+    }
+
+    .cta-btn {
+      border-color: $c-blue;
+      background-color: $c-blue;
+      color: $c-white;
+      font-weight: normal;
+      font-size: $f-l;
+      font-family: $f-elizeth;
+
+      &:active,
+      &:hover:not(:disabled) {
+        border-color: $c-blue-700;
+        background-color: $c-blue-700;
+        color: $c-white;
+      }
+    }
+  }
+
+  &--text {
+    position: relative;
+    margin: 45px 0 35px;
+    background: none;
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      height: 1px;
+      background: $c-grey-100;
+    }
+  }
+  &--text &_text {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    border: none;
+    padding: 3px 10px;
+    background: #FFF;
+    color: $c-base;
+    font-weight: 500;
+    font-size: $f-m;
+  }
+
+  &--medium {
+    margin: 2em 0;
+  }
+
+  &--large {
+    margin: 4em 0;
+  }
+}

@@ -1,0 +1,146 @@
+.panel-container {
+  &--rr {
+    margin-top: -25px;
+    margin-bottom: -50px;
+    padding: 50px 0 100px;
+    background-color: #ABABAB;
+
+    @include at-m {
+      padding: 80px 0 120px;
+      background-image: url('../../../images/comic/panels-bg-rr@2x.png');
+      background-position: center top;
+      background-size: 1750px 900px;
+    }
+  }
+
+  &--ddd {
+    padding: 10px 0;
+    background-color: #F4977B;
+
+    @include at-m {
+      padding: 15px 0 5px;
+      background-image: url('../../../images/comic/panels-bg-ddd@2x.png');
+      background-position: center top;
+      background-size: 1750px 786px;
+    }
+  }
+
+  &--ddd .panel {
+    height: 325px;
+  }
+}
+
+.panels {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.panel {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+  color: #000;
+  font-style: normal;
+  font-weight: 700;
+  font-family: $f-comic;
+
+  img {
+    width: 100%;
+  }
+
+  &_bubble,
+  &_badge {
+    position: absolute;
+    margin: 0;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background-color: #FFF;
+    font-size: $f-xs;
+    line-height: 1.4;
+    text-align: left;
+
+    a {
+      color: #000;
+      text-decoration-color: #000;
+      text-decoration-thickness: initial;
+    }
+  }
+
+  &_bubble--naked {
+    border: none;
+    background-color: transparent;
+  }
+
+  &_badge {
+    right: 4px;
+    bottom: 4px;
+    border-radius: 8px 0 0;
+    border-right: none;
+    border-bottom: none;
+    padding: 4px 6px;
+  }
+
+  &_badge--left {
+    right: auto;
+    left: 4px;
+    border-radius: 0 8px 0 0;
+    border-right: 2px solid #000;
+    border-left: none;
+  }
+
+  &_badge--top-left {
+    top: 4px;
+    right: auto;
+    bottom: auto;
+    left: 4px;
+    border-radius: 0 0 8px;
+    border-top: none;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-left: none;
+  }
+
+  &_badge--top-right {
+    top: 4px;
+    bottom: auto;
+    border-radius: 0 0 0 8px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid #000;
+  }
+
+  &_tooltip {
+    text-decoration: underline;
+  }
+  span.panel_tooltip {
+    cursor: help;
+  }
+  a.panel_tooltip {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 623px) {
+  .panels {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 300px 300px;
+    row-gap: 20px;
+    column-gap: 15px;
+    justify-content: center;
+  }
+
+  .panel {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .panels {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 300px 300px 300px;
+  }
+}

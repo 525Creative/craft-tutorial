@@ -1,0 +1,114 @@
+/** postcss-bem-linter: define customer-logos */
+
+$customers: (ikea: 79px, litmus: 110px, desk: 79px, minecraft: 112px, livestream: 122px, unicef: 86px, asana: 98px, codeclimate: 176px, livechat: 85px, onepassword: 123px, moz: 74px, faire: 132px, indiehackers: 152px, webflow: 106px, invision: 100px, paddle: 70px, betterment: 137px, wistia: 97px);
+$customer-position: 0;
+
+.customer-logos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &_logo {
+    display: inline-block;
+    height: 56px;
+    margin: 0 20px;
+    overflow: hidden;
+    background: url('../../../images/customers-logos@2x.png') no-repeat;
+    background-size: 2023px 55px;
+    opacity: 0.2;
+    text-indent: -9999em;
+    list-style: none;
+
+    @each $customer, $width in $customers {
+      /* postcss-bem-linter: ignore */
+      &--#{$customer} {
+        width: $width;
+        background-position: ($customer-position * -1) 0;
+      }
+      $customer-position: $customer-position + $width + 5px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // Centered
+  &--centered {
+    text-align: center;
+  }
+
+  // Padding on top
+  &--pad-top {
+    padding-top: 2em;
+  }
+
+  // Padding on bottom
+  &--pad-bottom {
+    padding-bottom: 2em;
+  }
+
+  // Interactive
+  &--interactive &_logo {
+    overflow: visible;
+    transition: filter 150ms ease-in-out;
+  }
+
+  // Hide on enterprise
+  &--enterprise &_logo--livestream,
+  &--enterprise &_logo--livechat,
+  &--enterprise &_logo--moz,
+  &--enterprise &_logo--litmus,
+  &--enterprise &_logo--codeclimate,
+  &--enterprise &_logo--faire,
+  &--enterprise &_logo--wistia,
+  &--enterprise &_logo--betterment,
+  &--enterprise &_logo--webflow,
+  &--enterprise &_logo--indiehackers,
+  &--enterprise &_logo--invision,
+  &--enterprise &_logo--paddle {
+    display: none;
+  }
+
+  // Hide some logos by default
+  &_logo--faire,
+  &_logo--wistia,
+  &_logo--betterment,
+  &_logo--webflow,
+  &_logo--indiehackers,
+  &_logo--invision,
+  &_logo--paddle {
+    display: none;
+  }
+
+  // Home page
+  &--home {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &--home &_logo--faire,
+  &--home &_logo--wistia,
+  &--home &_logo--betterment,
+  &--home &_logo--webflow,
+  &--home &_logo--indiehackers,
+  &--home &_logo--invision,
+  &--home &_logo--paddle {
+    display: inline-block;
+  }
+
+  &--home &_logo--unicef,
+  &--home &_logo--asana,
+  &--home &_logo--livestream,
+  &--home &_logo--codeclimate,
+  &--home &_logo--livechat,
+  &--home &_logo--moz,
+  &--home &_logo--ikea,
+  &--home &_logo--litmus,
+  &--home &_logo--desk {
+    display: none;
+  }
+}
