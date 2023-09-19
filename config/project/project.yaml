@@ -1,7 +1,7 @@
-dateModified: 1691612984
+dateModified: 1691445391
 email:
-  fromEmail: jtorres@activecampaign.com
-  fromName: 'Tutorial Site'
+  fromEmail: jabal@fivetwofive.com
+  fromName: craft-test
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   hardDisk:
@@ -11,53 +11,46 @@ fs:
       path: '@webroot/uploads/images'
     type: craft\fs\Local
     url: '@web/uploads/images'
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 meta:
   __names__:
-    1c74848f-584f-49dd-a891-14c358833908: 'Profile Photo' # Profile Photo
-    3e00c9a2-2a63-4e9c-81c7-82cd588e08e9: 'Tutorial Site' # Tutorial Site
-    4dfc25d9-6f06-4a20-acf6-161b0bcac4e4: Blog # Blog
-    6ff595ed-a375-408b-9cb8-19c002ff9b87: Summary # Summary
-    8da18c8e-1645-4995-b960-7a4b9bad4f20: Image # Image
-    8f2c3fea-0e7d-4e44-b384-ba7a489363d9: 'Feature Image' # Feature Image
-    37c9ec83-f71d-42e8-99ab-b3c7f95886f3: Text # Text
-    52e9a500-b109-407e-b187-4faffbfd3bde: Global # Global
-    67c28def-efd1-4922-95a8-93f9522a642f: Blog # Blog
-    83b692c6-234d-44e4-9a64-29e912087415: Topics # Topics
-    84ec6454-1095-45b4-a86f-4855750af881: 'Post Content' # Post Content
-    131d0deb-2e3c-4c1d-94ed-150411ed0370: Post # Post
-    687d3fa9-27f4-494b-9c65-59ba7106c23a: Bio # Bio
-    966a7d4b-62d2-4770-be0b-3da984dfbc19: Images # Images
-    6477d700-1ef7-4415-b9c5-e91f7a55b9f2: Topics # Topics
-    7016fe27-f48f-4cfc-a214-303166d3b6dd: Text # Text
-    7308b14d-cc31-4e86-8652-f9071c0efa6f: 'Tutorial Site' # Tutorial Site
-    50983ca2-aeb5-42d3-b9a6-a0a3dc136af5: About # About
-    66045a9e-eefb-492a-9aa1-a9c7d5f0c68c: Image # Image
-    46935009-9fcc-478e-bfa4-a249b778952b: About # About
-    b56a6e6e-52b7-4f83-9b53-9dcb7d85eae9: About # About
-    c0acaccc-3815-4253-af03-c8fec26a1f3f: Description # Description
-    c7e90bdd-1d20-4342-8198-ddaccaff7a8d: 'Site Info' # Site Info
-    d8d165e1-f753-4ce0-9dba-03789f1acd8c: Thumbnail # Thumbnail
-    d33b630a-593c-4040-a5d6-3b45e41d4fc7: Common # Common
-    dcb50c67-8752-440a-8350-ddec5769edac: Simple # Simple
-    df7f45a8-4b01-4b88-8631-701431b9770e: Quote # Quote
-    fcd4d3b6-cd49-4c58-bca8-5188c0c6483e: Quote # Quote
+    1b57e832-0969-4f6f-a21d-70154bb6832c: About # About
+    1c401a2a-0e45-402b-96b0-6e38edb7566e: Text # Text
+    1cd6d061-44da-40cb-a1f7-68e1a605c7cd: Post # Post
+    1f377646-fc1c-46a6-8aed-e39774201adc: Global # Global
+    3cc8ad2d-dab8-43e1-9673-48be60532d16: Text # Text
+    9a70447f-02cb-470a-badf-d67b1ffab7f3: Blog # Blog
+    9f136435-1320-4313-a74e-f2201e29e183: Common # Common
+    63a8f6da-38e7-4141-901a-a4dfd36fd619: Description # Description
+    65e47780-9585-4fcf-a8f5-3683e6ec1e2c: Images # Images
+    84a80685-2a9b-4cec-8059-a370c7fcf152: About # About
+    088c2300-7722-4813-bfe1-5fe194c182a4: Thumbnail # Thumbnail
+    90dae052-7e10-495e-b865-7f417f8b9e2f: 'Site Info' # Site Info
+    92d55be7-555b-440b-b9a8-d2642e7ca5cf: 'Feature Image' # Feature Image
+    94b7bdd1-6568-49a2-991e-64a7ba6c9107: Simple # Simple
+    95a4b6b0-053d-43e2-82b1-fb53b30b06af: 'Post Content' # Post Content
+    138ddded-e7d3-4a9b-85b1-db7825c1b5a7: Quote # Quote
+    379f0d98-b240-4bd4-b868-1e438ab7fdd0: Quote # Quote
+    8338ab10-7fd0-463f-a018-2a9694047a30: Topics # Topics
+    43916e71-d8c6-401a-89d6-b349372bd1ed: Bio # Bio
+    96684751-f7fe-4393-be93-c2a3c78fc587: craft-test # craft-test
+    abd7299e-407f-41d0-9827-42245f1762fe: Blog # Blog
+    bb8f359f-9038-4d1a-abf1-01bb08b2ddf8: 'Post Content config' # Post Content config
+    bdf483fb-8811-4908-82b5-82c35ce0707e: Summary # Summary
+    c25ef9e9-79c2-4dc5-ad02-a0e139b2b7b8: 'Profile Photo' # Profile Photo
+    cb106b50-ce48-47da-8a25-3b24cee634ce: Image # Image
+    d5ebd6fc-9dcf-4c94-a1af-370e1977d753: Image # Image
+    eeff00cf-4aab-4e73-b0a8-f75cfb384387: About # About
+    fe9323c5-36cd-413c-a595-ee6d7dda65de: Topics # Topics
+    ff3f0ade-2d6b-4cc8-ac3e-d5599925b13e: craft-test # craft-test
 plugins:
   ckeditor:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
-  twigpack:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true
-  name: 'Tutorial Site'
+  name: craft-test
   schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:

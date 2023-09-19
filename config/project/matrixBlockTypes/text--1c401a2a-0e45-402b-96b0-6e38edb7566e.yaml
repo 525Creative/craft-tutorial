@@ -1,0 +1,49 @@
+field: 95a4b6b0-053d-43e2-82b1-fb53b30b06af # Post Content
+fieldLayouts:
+  0c23dae3-573b-4378-8140-48b37190fa4f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3cc8ad2d-dab8-43e1-9673-48be60532d16 # Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf8f914b-a24b-4543-b4e2-b2f55346b0ae
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9d876923-d6c4-445b-9037-5b47931e738c
+        userCondition: null
+fields:
+  3cc8ad2d-dab8-43e1-9673-48be60532d16: # Text
+    columnSuffix: zlvvgnlc
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: bb8f359f-9038-4d1a-abf1-01bb08b2ddf8 # Post Content config
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: text
+name: Text
+sortOrder: 1
