@@ -33,5 +33,7 @@
 
     {% include 'partials/_footer.twig' %}
 
+    {% do craft.app.view.registerJsFile('@web/dist/main.js') %}
+
     </body>
 </html>
