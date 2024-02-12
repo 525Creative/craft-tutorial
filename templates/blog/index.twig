@@ -10,6 +10,8 @@
 {% block content %}
     <h1>Blog</h1>
 
-    {% include 'blog/_feed' %}
+    {% include 'blog/_feed' with {
+        posts: posts
+    } only %}
 
 {% endblock %}

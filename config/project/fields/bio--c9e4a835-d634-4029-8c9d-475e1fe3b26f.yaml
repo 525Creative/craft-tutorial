@@ -1,0 +1,19 @@
+columnSuffix: qlixymnk
+contentColumnType: text
+fieldGroup: 38eef2bd-7d77-4434-b88f-77b1b8ca2eb7 # About
+handle: bio
+instructions: null
+name: Bio
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 8
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

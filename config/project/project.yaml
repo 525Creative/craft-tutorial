@@ -1,4 +1,4 @@
-dateModified: 1707767679
+dateModified: 1707775373
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
@@ -23,15 +23,23 @@ meta:
     7a1b82eb-d318-46aa-8e8f-7506b48aee2d: Blog # Blog
     8b2a7c04-48f7-4fb6-8dc5-be277443d4fc: Images # Images
     9c554798-c3a0-4549-a6bf-4156ca9be114: Image # Image
+    25daa564-16e1-48dc-82cd-e7574dea8af3: Global # Global
+    38eef2bd-7d77-4434-b88f-77b1b8ca2eb7: About # About
     59db6485-6d94-4359-a80b-5b3249f82a49: Topics # Topics
+    511a57ef-55b0-4515-b21e-227aef13ab2e: About # About
     650bc1ff-e15b-41be-b69b-a7aedaa8efa7: Text # Text
     886b46bf-da60-4dcc-a940-a7e0854a7403: 'Post Content' # Post Content
     7308b14d-cc31-4e86-8652-f9071c0efa6f: 'Tutorial Site' # Tutorial Site
+    135505bb-6683-40d7-8961-76d77c88421e: 'Profile Photo' # Profile Photo
     428644de-73aa-4389-9583-68a8bbf8b95c: Summary # Summary
+    6337991d-bfd5-4045-9826-6acfdbd2e759: About # About
     bb6d488a-cd5d-4aa5-82df-960d7b4df07b: Thumbnail # Thumbnail
     c0337644-61c7-421b-8cfc-b8dd2e6382d4: Simple # Simple
+    c2d1af71-2e4d-49b3-881f-ad4cd959615e: 'Site Info' # Site Info
+    c9e4a835-d634-4029-8c9d-475e1fe3b26f: Bio # Bio
     df98fed2-fa22-418c-bb3c-04df4d1e7164: Image # Image
     eb68f344-a25b-40b1-ae47-8d293a5d0646: Text # Text
+    fb684f3f-4ef6-4f56-b69b-4abec53cd789: Description # Description
     fee3d556-a4f3-4e7e-ba19-aa389f5d5d4a: 'Tutorial Site' # Tutorial Site
 plugins:
   ckeditor:

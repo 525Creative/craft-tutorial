@@ -1,0 +1,19 @@
+columnSuffix: rohnqnfb
+contentColumnType: text
+fieldGroup: 25daa564-16e1-48dc-82cd-e7574dea8af3 # Global
+handle: description
+instructions: null
+name: Description
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
