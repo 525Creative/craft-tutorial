@@ -41,11 +41,11 @@ siteSettings:
   0afd5de4-5de3-4dc8-99e7-7a6c9df9ea63: # Tutorial Site
     hasUrls: true
     template: blog/_topic
-    uriFormat: 'blog/topic/{slug}'
+    uriFormat: 'blog/topics/{slug}'
   3e00c9a2-2a63-4e9c-81c7-82cd588e08e9: # Tutorial Site
     hasUrls: true
     template: blog/_topic
-    uriFormat: 'blog/topic/{slug}'
+    uriFormat: 'blog/topics/{slug}'
 structure:
   maxLevels: 1
   uid: 0cd46b16-ef23-4e8e-9b6f-ab989c8c6e1b
