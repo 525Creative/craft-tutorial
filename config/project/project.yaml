@@ -1,8 +1,16 @@
-dateModified: 1707763525
+dateModified: 1707763960
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  hardDisk:
+    hasUrls: true
+    name: 'Hard Disk'
+    settings:
+      path: '@webroot/uploads/images'
+    type: craft\fs\Local
+    url: '@web/uploads/images'
 meta:
   __names__:
     0afd5de4-5de3-4dc8-99e7-7a6c9df9ea63: 'Tutorial Site' # Tutorial Site
@@ -10,6 +18,7 @@ meta:
     3e00c9a2-2a63-4e9c-81c7-82cd588e08e9: 'Tutorial Site' # Tutorial Site
     4dfcfdf5-8fe2-42b3-b3f8-4c0b3ba749c1: Default # Default
     7a1b82eb-d318-46aa-8e8f-7506b48aee2d: Blog # Blog
+    8b2a7c04-48f7-4fb6-8dc5-be277443d4fc: Images # Images
     7308b14d-cc31-4e86-8652-f9071c0efa6f: 'Tutorial Site' # Tutorial Site
     fee3d556-a4f3-4e7e-ba19-aa389f5d5d4a: 'Tutorial Site' # Tutorial Site
 system:
