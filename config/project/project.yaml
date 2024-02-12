@@ -1,4 +1,4 @@
-dateModified: 1707765068
+dateModified: 1707767679
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
@@ -28,6 +28,7 @@ meta:
     886b46bf-da60-4dcc-a940-a7e0854a7403: 'Post Content' # Post Content
     7308b14d-cc31-4e86-8652-f9071c0efa6f: 'Tutorial Site' # Tutorial Site
     428644de-73aa-4389-9583-68a8bbf8b95c: Summary # Summary
+    bb6d488a-cd5d-4aa5-82df-960d7b4df07b: Thumbnail # Thumbnail
     c0337644-61c7-421b-8cfc-b8dd2e6382d4: Simple # Simple
     df98fed2-fa22-418c-bb3c-04df4d1e7164: Image # Image
     eb68f344-a25b-40b1-ae47-8d293a5d0646: Text # Text
