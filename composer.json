@@ -2,6 +2,7 @@
   "require": {
     "craftcms/ckeditor": "^3.7",
     "craftcms/cms": "4.7.2.1",
+    "spicyweb/craft-neo": "4.0.3",
     "vlucas/phpdotenv": "^5.4.0",
     "wbrowar/craft-admin-bar": "4.3.0"
   },

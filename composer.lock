@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43347ce4b5dc5f7f663b7f4731943b3b",
+    "content-hash": "bd4e4c629e7a79d89972c9a6b4fcc479",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -2664,6 +2664,59 @@
                 "unix"
             ],
             "time": "2023-09-03T09:24:00+00:00"
+        },
+        {
+            "name": "spicyweb/craft-neo",
+            "version": "4.0.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spicywebau/craft-neo/zipball/de1604870423481d31e8119668112c0c958b247f",
+                "reference": "de1604870423481d31e8119668112c0c958b247f",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.5.0",
+                "php": "^8.0.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "neo",
+                "name": "Neo",
+                "schemaVersion": "4.0.0",
+                "class": "benf\\neo\\Plugin",
+                "changelogUrl": "https://github.com/spicywebau/craft-neo/blob/4.x/CHANGELOG.md",
+                "downloadUrl": "https://github.com/spicywebau/craft-neo/archive/refs/tags/4.0.3.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "benf\\neo\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Spicy Web",
+                    "homepage": "https://github.com/spicywebau"
+                }
+            ],
+            "description": "A Matrix-like field type that uses existing fields",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "field",
+                "matrix",
+                "neo",
+                "plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/spicywebau/craft-neo/issues",
+                "source": "https://github.com/spicywebau/craft-neo",
+                "docs": "https://github.com/spicywebau/craft-neo/blob/4.0.3/README.md",
+                "rss": "https://github.com/spicywebau/craft-neo/commits/4.x.atom"
+            },
+            "time": "2024-01-29T08:58:19+00:00"
         },
         {
             "name": "symfony/console",

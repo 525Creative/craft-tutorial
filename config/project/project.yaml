@@ -1,4 +1,4 @@
-dateModified: 1707777012
+dateModified: 1707779902
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
@@ -50,6 +50,21 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  neo:
+    edition: standard
+    enabled: true
+    licenseKey: 7G8XG30ML7IF9PMDU0OX9HBA
+    schemaVersion: 4.0.0
+    settings:
+      blockTypeIconPath: '@webroot'
+      blockTypeIconSelectMode: sources
+      blockTypeIconSources: '*'
+      collapseAllBlocks: true
+      defaultAlwaysShowGroupDropdowns: true
+      enableBlockTypeUserPermissions: true
+      enableLazyLoadingNewBlocks: true
+      newBlockMenuStyle: classic
+      optimiseSearchIndexing: true
 system:
   edition: solo
   live: true
