@@ -1,4 +1,4 @@
-dateModified: 1705940944
+dateModified: 1707763525
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
@@ -8,6 +8,8 @@ meta:
     0afd5de4-5de3-4dc8-99e7-7a6c9df9ea63: 'Tutorial Site' # Tutorial Site
     0f1d7dfe-0c34-48e4-9078-1edfe1ca6e9b: Common # Common
     3e00c9a2-2a63-4e9c-81c7-82cd588e08e9: 'Tutorial Site' # Tutorial Site
+    4dfcfdf5-8fe2-42b3-b3f8-4c0b3ba749c1: Default # Default
+    7a1b82eb-d318-46aa-8e8f-7506b48aee2d: Blog # Blog
     7308b14d-cc31-4e86-8652-f9071c0efa6f: 'Tutorial Site' # Tutorial Site
     fee3d556-a4f3-4e7e-ba19-aa389f5d5d4a: 'Tutorial Site' # Tutorial Site
 system:
