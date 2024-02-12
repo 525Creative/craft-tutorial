@@ -1,4 +1,4 @@
-dateModified: 1707764071
+dateModified: 1707765068
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
@@ -15,13 +15,28 @@ meta:
   __names__:
     0afd5de4-5de3-4dc8-99e7-7a6c9df9ea63: 'Tutorial Site' # Tutorial Site
     0f1d7dfe-0c34-48e4-9078-1edfe1ca6e9b: Common # Common
+    0f31503b-cd5c-4116-a3b3-c8fed72e2701: 'Feature Image' # Feature Image
+    3bb780d9-143a-44f5-93b1-484a288ad88b: Blog # Blog
     3e00c9a2-2a63-4e9c-81c7-82cd588e08e9: 'Tutorial Site' # Tutorial Site
-    4dfcfdf5-8fe2-42b3-b3f8-4c0b3ba749c1: Default # Default
+    4dfcfdf5-8fe2-42b3-b3f8-4c0b3ba749c1: Post # Post
     6de44d1c-affc-400f-a29c-c4bcd8f761f1: Topics # Topics
     7a1b82eb-d318-46aa-8e8f-7506b48aee2d: Blog # Blog
     8b2a7c04-48f7-4fb6-8dc5-be277443d4fc: Images # Images
+    9c554798-c3a0-4549-a6bf-4156ca9be114: Image # Image
+    59db6485-6d94-4359-a80b-5b3249f82a49: Topics # Topics
+    650bc1ff-e15b-41be-b69b-a7aedaa8efa7: Text # Text
+    886b46bf-da60-4dcc-a940-a7e0854a7403: 'Post Content' # Post Content
     7308b14d-cc31-4e86-8652-f9071c0efa6f: 'Tutorial Site' # Tutorial Site
+    428644de-73aa-4389-9583-68a8bbf8b95c: Summary # Summary
+    c0337644-61c7-421b-8cfc-b8dd2e6382d4: Simple # Simple
+    df98fed2-fa22-418c-bb3c-04df4d1e7164: Image # Image
+    eb68f344-a25b-40b1-ae47-8d293a5d0646: Text # Text
     fee3d556-a4f3-4e7e-ba19-aa389f5d5d4a: 'Tutorial Site' # Tutorial Site
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
 system:
   edition: solo
   live: true
