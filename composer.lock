@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "759add0884062cdb46f1b62654594abd",
+    "content-hash": "43347ce4b5dc5f7f663b7f4731943b3b",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -4509,6 +4509,64 @@
             "time": "2022-01-24T19:08:46+00:00"
         },
         {
+            "name": "wbrowar/craft-admin-bar",
+            "version": "4.3.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wbrowar/craft-admin-bar/zipball/0bbe369c4cde11423623cae841c210dd6c504bbe",
+                "reference": "0bbe369c4cde11423623cae841c210dd6c504bbe",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0",
+                "nystudio107/craft-code-editor": "^1.0.15"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Admin Bar",
+                "handle": "admin-bar",
+                "schemaVersion": "3.1.0",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "developerUrl": "https://wbrowar.com",
+                "documentationUrl": "https://raw.githubusercontent.com/wbrowar/craft-admin-bar/main/README.md",
+                "changelogUrl": "https://raw.githubusercontent.com/wbrowar/craft-admin-bar/main/CHANGELOG.md",
+                "class": "wbrowar\\adminbar\\AdminBar"
+            },
+            "autoload": {
+                "psr-4": {
+                    "wbrowar\\adminbar\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Will Browar",
+                    "homepage": "https://wbrowar.com"
+                }
+            ],
+            "description": "Front-end shortcuts for clients logged into Craft CMS.",
+            "keywords": [
+                "admin bar",
+                "admin toolbar",
+                "admin-bar",
+                "author experience",
+                "ax",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "toolbar"
+            ],
+            "support": {
+                "docs": "https://raw.githubusercontent.com/wbrowar/craft-admin-bar/main/README.md",
+                "issues": "https://github.com/wbrowar/craft-admin-bar/issues"
+            },
+            "time": "2024-02-10T02:17:02+00:00"
+        },
+        {
             "name": "webmozart/assert",
             "version": "1.11.0",
             "dist": {
@@ -5247,5 +5305,5 @@
     "platform-overrides": {
         "php": "8.0.2"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }

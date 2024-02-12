@@ -8,32 +8,33 @@
         {% do craft.app.view.registerCssFile('@web/dist/main.css') %}
     </head>
     <body>
-    <header>
-        <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
+        {{ adminBar() }}
+        <header>
+            <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
 
-        {# Get the first segment of the current URI: #}
-        {% set navSegment = craft.app.request.getSegment(1) %}
+            {# Get the first segment of the current URI: #}
+            {% set navSegment = craft.app.request.getSegment(1) %}
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="{{ url('blog') }}" class="{{ navSegment == 'blog' ? 'active' : 'inactive' }}">Blog</a>
-                </li>
-                <li>
-                    <a href="{{ url('about') }}" class="{{ navSegment == 'about' ? 'active' : 'inactive' }}">About</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        {% block content %}
-            {# Nothing here, yet! #}
-        {% endblock %}
-    </main>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{{ url('blog') }}" class="{{ navSegment == 'blog' ? 'active' : 'inactive' }}">Blog</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('about') }}" class="{{ navSegment == 'about' ? 'active' : 'inactive' }}">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {% block content %}
+                {# Nothing here, yet! #}
+            {% endblock %}
+        </main>
 
-    {% include 'partials/_footer.twig' %}
+        {% include 'partials/_footer.twig' %}
 
-    {% do craft.app.view.registerJsFile('@web/dist/main.js') %}
+        {% do craft.app.view.registerJsFile('@web/dist/main.js') %}
 
     </body>
 </html>

@@ -1,4 +1,4 @@
-dateModified: 1707775373
+dateModified: 1707777012
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
@@ -42,6 +42,10 @@ meta:
     fb684f3f-4ef6-4f56-b69b-4abec53cd789: Description # Description
     fee3d556-a4f3-4e7e-ba19-aa389f5d5d4a: 'Tutorial Site' # Tutorial Site
 plugins:
+  admin-bar:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
   ckeditor:
     edition: standard
     enabled: true
