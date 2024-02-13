@@ -8,7 +8,7 @@
                 {% switch block.type.handle %}
                 {% case 'text' %}
                     <div class="text-block text-align-{{ block.textAlign }}  text-3xl font-bold underline">
-                        {{ block.text }}
+                        <p class="font-bold">{{ block.text }}</p>
                     </div>
                 {% default %}
                     {# Handle other block types if needed #}

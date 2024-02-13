@@ -30,11 +30,11 @@ const config = {
             },
             {
                 test: /\.css$/i,
-                use: [stylesHandler,'css-loader'],
+                use: [stylesHandler, 'css-loader', 'postcss-loader'], // Add postcss-loader for Tailwind CSS
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: [stylesHandler, 'css-loader', 'sass-loader'],
+                use: [stylesHandler, 'css-loader', 'postcss-loader', 'sass-loader'], // Add postcss-loader for Tailwind CSS
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
