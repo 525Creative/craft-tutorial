@@ -1,0 +1,58 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: d50039d7-5e92-49af-8946-1f17bc687cb0 # Neo Modules
+fieldLayouts:
+  61f1e218-a48c-47b0-a4a6-0d95e8382bd0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: bb457ee9-f0a0-4959-9913-9f4a9a38fba2 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 377a35b5-f9d3-4dfe-9001-595aa6738e4b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Text
+        uid: 7274b593-1651-4c6e-99ca-1485386bc1bd
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1f3df265-ec7c-4b27-b693-2a53c5ff1f1b # Text Align
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d57b04fb-5099-4bee-846d-109254476eac
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 1d21d4d4-cedd-4248-a4ef-dd4a00656416
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: text
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Text
+topLevel: true

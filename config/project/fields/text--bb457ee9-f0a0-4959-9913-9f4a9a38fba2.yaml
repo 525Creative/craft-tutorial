@@ -1,0 +1,19 @@
+columnSuffix: qtodocxl
+contentColumnType: text
+fieldGroup: 0f1d7dfe-0c34-48e4-9078-1edfe1ca6e9b # Common
+handle: text
+instructions: null
+name: Text
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

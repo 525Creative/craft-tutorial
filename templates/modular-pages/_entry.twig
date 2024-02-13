@@ -1,0 +1,19 @@
+{% extends "_layout" %}
+
+{% block content %}
+    <div class="container">
+        {% set neoField = entry.neoModules %}
+        {% if neoField|length %}
+            {% for block in neoField.all() %}
+                {% switch block.type.handle %}
+                {% case 'text' %}
+                    <div class="text-block text-align-{{ block.textAlign }}  text-3xl font-bold underline">
+                        {{ block.text }}
+                    </div>
+                {% default %}
+                    {# Handle other block types if needed #}
+                {% endswitch %}
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

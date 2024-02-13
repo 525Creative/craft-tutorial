@@ -1,0 +1,59 @@
+fieldLayouts:
+  53fac467-d7db-4a80-a338-dbd027371cb2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 023b6f4e-9bfb-4932-8b46-d781857fba38
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d50039d7-5e92-49af-8946-1f17bc687cb0 # Neo Modules
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8cfc276a-bb28-45b5-86fc-92fef5d85590
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bde163e5-4a2b-4331-845b-9c7d523908c6
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 6fbaeec9-494a-4e05-aadc-3beb1822db4c # Modular Pages
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

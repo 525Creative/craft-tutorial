@@ -1,12 +1,12 @@
 defaultPlacement: end
 enableVersioning: true
-handle: blog
-name: Blog
+handle: modularPages
+name: 'Modular Pages'
 propagationMethod: all
 siteSettings:
   0afd5de4-5de3-4dc8-99e7-7a6c9df9ea63: # Tutorial Site
     enabledByDefault: true
     hasUrls: true
-    template: blog/_entry
-    uriFormat: 'blog/{slug}'
+    template: modular-pages/_entry
+    uriFormat: 'modular-pages/{slug}'
 type: channel
