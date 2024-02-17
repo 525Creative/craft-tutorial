@@ -4,11 +4,23 @@ description: ''
 enabled: true
 field: d50039d7-5e92-49af-8946-1f17bc687cb0 # Neo Modules
 fieldLayouts:
-  61f1e218-a48c-47b0-a4a6-0d95e8382bd0:
+  83be927a-4cef-4467-a23f-a6d171758d4f:
     tabs:
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            fieldUid: 162147f8-0e19-48ba-b875-292508a05162 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c6716822-9820-419a-bc60-9e19a2545208
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: bb457ee9-f0a0-4959-9913-9f4a9a38fba2 # Text
@@ -21,12 +33,36 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 1ca00a3f-93ce-4ef6-a2d4-32b6a2123198 # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7fa256bf-40b5-45f0-9254-b7ca2959f202
+            userCondition: null
+            warning: null
+            width: 100
         name: Text
         uid: 7274b593-1651-4c6e-99ca-1485386bc1bd
         userCondition: null
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            fieldUid: ba2e78a9-85f7-44b7-b77d-fffa2dd3e3f2 # Heading Tag
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31cef078-ad34-47f9-9689-16b203b613bc
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: 1f3df265-ec7c-4b27-b693-2a53c5ff1f1b # Text Align

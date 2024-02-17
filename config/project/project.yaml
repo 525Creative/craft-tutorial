@@ -1,4 +1,4 @@
-dateModified: 1707785083
+dateModified: 1708204822
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
@@ -16,6 +16,7 @@ meta:
     0afd5de4-5de3-4dc8-99e7-7a6c9df9ea63: 'Tutorial Site' # Tutorial Site
     0f1d7dfe-0c34-48e4-9078-1edfe1ca6e9b: Common # Common
     0f31503b-cd5c-4116-a3b3-c8fed72e2701: 'Feature Image' # Feature Image
+    1ca00a3f-93ce-4ef6-a2d4-32b6a2123198: Button # Button
     1f3df265-ec7c-4b27-b693-2a53c5ff1f1b: 'Text Align' # Text Align
     3bb780d9-143a-44f5-93b1-484a288ad88b: Blog # Blog
     4a89105f-c8aa-44f6-83fb-cd3b88ce4946: Default # Default
@@ -31,19 +32,25 @@ meta:
     511a57ef-55b0-4515-b21e-227aef13ab2e: About # About
     650bc1ff-e15b-41be-b69b-a7aedaa8efa7: Text # Text
     00651ecb-b941-4cd7-ab71-e7e5cfd3f23b: Text # Text
+    680dd936-cde7-4118-9031-7dc4bfe77573: Button # Button
     886b46bf-da60-4dcc-a940-a7e0854a7403: 'Post Content' # Post Content
+    1972d550-c860-4711-96da-5922ac550c76: 'Reusable Fields' # Reusable Fields
     135505bb-6683-40d7-8961-76d77c88421e: 'Profile Photo' # Profile Photo
+    162147f8-0e19-48ba-b875-292508a05162: Heading # Heading
     428644de-73aa-4389-9583-68a8bbf8b95c: Summary # Summary
     6337991d-bfd5-4045-9826-6acfdbd2e759: About # About
     ae5a4a98-dea0-40f5-aead-736cd0f611e2: Neo # Neo
+    ba2e78a9-85f7-44b7-b77d-fffa2dd3e3f2: 'Heading Tag' # Heading Tag
     bb6d488a-cd5d-4aa5-82df-960d7b4df07b: Thumbnail # Thumbnail
     bb457ee9-f0a0-4959-9913-9f4a9a38fba2: Text # Text
     c0337644-61c7-421b-8cfc-b8dd2e6382d4: Simple # Simple
     c2d1af71-2e4d-49b3-881f-ad4cd959615e: 'Site Info' # Site Info
     c9e4a835-d634-4029-8c9d-475e1fe3b26f: Bio # Bio
+    d0dc1d46-2569-427c-b30b-e139aab00f7c: 'Button URI' # Button URI
     d50039d7-5e92-49af-8946-1f17bc687cb0: 'Neo Modules' # Neo Modules
     df98fed2-fa22-418c-bb3c-04df4d1e7164: Image # Image
     eb68f344-a25b-40b1-ae47-8d293a5d0646: Text # Text
+    ee74eb9a-9192-4609-887b-d65bdd26d660: 'Button Text' # Button Text
     fb684f3f-4ef6-4f56-b69b-4abec53cd789: Description # Description
     fee3d556-a4f3-4e7e-ba19-aa389f5d5d4a: 'Tutorial Site' # Tutorial Site
 plugins:

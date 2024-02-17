@@ -1,0 +1,46 @@
+columnSuffix: epequawp
+contentColumnType: string(2)
+fieldGroup: 0f1d7dfe-0c34-48e4-9078-1edfe1ca6e9b # Common
+handle: headingTag
+instructions: null
+name: 'Heading Tag'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - h2
+        -
+          - value
+          - h2
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - h3
+        -
+          - value
+          - h3
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - h4
+        -
+          - value
+          - h4
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

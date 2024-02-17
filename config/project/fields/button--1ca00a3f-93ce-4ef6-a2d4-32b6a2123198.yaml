@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 1972d550-c860-4711-96da-5922ac550c76 # Reusable Fields
+handle: button
+instructions: null
+name: Button
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_button}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
