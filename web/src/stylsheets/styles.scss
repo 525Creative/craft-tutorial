@@ -195,3 +195,15 @@ article a {
   padding: var(--layout-site-gutter);
   text-align: center;
 }
+
+.button{
+  background-color: var(--color-highlight);
+  border: none;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  font-family: var(--type-technical);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  display: inline-block;
+}
