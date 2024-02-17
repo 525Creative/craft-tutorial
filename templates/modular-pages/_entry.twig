@@ -2,28 +2,35 @@
 
 {% block content %}
     <div class="container">
-        {% set neoField = entry.neoModules %}
-        {% if neoField|length %}
-            {% for block in neoField %}
-                {% switch block.type.handle %}
-                {% case 'text' %}
-                    <div class="text-block text-align-{{ block.textAlign }}">
-                        {# Heading #}
-                        <{{ block.headingTag }} class="block-heading">{{ block.heading }}</{{ block.headingTag }}>
+    {% set neoField = entry.neoModules %}
+    {% if neoField|length %}
+        {% for block in neoField %}
+            {% switch block.type.handle %}
+            {% case 'text' %}
+            <div class="text-block text-align-{{ block.textAlign }}">
+                {# Heading #}
+                {% if block.headingClass is defined and block.headingClass is not empty %}
+                    {% set validHeadingClass = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] %}
+                    {% set headingClass = block.headingClass|lower %}
+                    {% if headingClass in validHeadingClass %}
+                        <h3 class="block-heading {{ headingClass }}">{{ block.heading }}</h3>
+                    {% else %}
+                        <div class="block-heading">{{ block.heading }}</div>
+                    {% endif %}
+                {% endif %}
 
-                        {# Text #}
-                        <p class="block-text mb-3">{{ block.text }}</p>
+                {# Text #}
+                <p class="block-text mb-3">{{ block.text }}</p>
 
-                        {# Button #}
-                        {% for button in block.button %}
-                            <a href="{{ button.buttonUri }}" class="button">{{ button.buttonText }}</a>
-                        {% endfor %}
-                    </div>
-                {% default %}
-                    {# Handle other block types if needed #}
-                {% endswitch %}
-            {% endfor %}
-        {% endif %}
+                {# Button #}
+                {% for button in block.button %}
+                    <a href="{{ button.buttonUri }}" class="button">{{ button.buttonText }}</a>
+                {% endfor %}
+                </div>
+            {% default %}
+                {# Handle other block types if needed #}
+            {% endswitch %}
+        {% endfor %}
+    {% endif %}
     </div>
 {% endblock %}
-

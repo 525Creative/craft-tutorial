@@ -1,13 +1,24 @@
 columnSuffix: epequawp
 contentColumnType: string(2)
 fieldGroup: 0f1d7dfe-0c34-48e4-9078-1edfe1ca6e9b # Common
-handle: headingTag
+handle: headingClass
 instructions: null
-name: 'Heading Tag'
+name: 'Heading Class'
 searchable: false
 settings:
   columnType: null
   options:
+    -
+      __assoc__:
+        -
+          - label
+          - h1
+        -
+          - value
+          - h1
+        -
+          - default
+          - ''
     -
       __assoc__:
         -
@@ -38,6 +49,28 @@ settings:
         -
           - value
           - h4
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - h5
+        -
+          - value
+          - h5
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - H6
+        -
+          - value
+          - h6
         -
           - default
           - ''

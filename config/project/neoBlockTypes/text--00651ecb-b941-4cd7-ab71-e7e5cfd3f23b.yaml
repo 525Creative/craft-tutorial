@@ -53,7 +53,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: ba2e78a9-85f7-44b7-b77d-fffa2dd3e3f2 # Heading Tag
+            fieldUid: ba2e78a9-85f7-44b7-b77d-fffa2dd3e3f2 # Heading Class
             instructions: null
             label: null
             required: false
