@@ -1,0 +1,22 @@
+// typography.scss
+
+// Define common heading styles
+.heading {
+  font-weight: bold;
+}
+
+// Define individual heading styles
+.h1 {
+  @extend .heading;
+  font-size: 2.25rem;
+}
+
+.h2 {
+  @extend .heading;
+  font-size: 1.875rem;
+}
+
+.h3 {
+  @extend .heading;
+  font-size: 1.5rem;
+}

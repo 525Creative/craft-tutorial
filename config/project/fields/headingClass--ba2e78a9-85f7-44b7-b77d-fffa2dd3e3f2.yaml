@@ -29,7 +29,7 @@ settings:
           - h2
         -
           - default
-          - '1'
+          - ''
     -
       __assoc__:
         -
@@ -40,7 +40,7 @@ settings:
           - h3
         -
           - default
-          - ''
+          - '1'
     -
       __assoc__:
         -

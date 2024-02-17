@@ -45,7 +45,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Text
+        name: Content
         uid: 7274b593-1651-4c6e-99ca-1485386bc1bd
         userCondition: null
       -
@@ -80,7 +80,7 @@ fieldLayouts:
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: text
+handle: textBlock
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -90,5 +90,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: Text
+name: 'Text Block'
 topLevel: true

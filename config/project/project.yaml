@@ -1,4 +1,4 @@
-dateModified: 1708207483
+dateModified: 1708208511
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
@@ -31,7 +31,7 @@ meta:
     59db6485-6d94-4359-a80b-5b3249f82a49: Topics # Topics
     511a57ef-55b0-4515-b21e-227aef13ab2e: About # About
     650bc1ff-e15b-41be-b69b-a7aedaa8efa7: Text # Text
-    00651ecb-b941-4cd7-ab71-e7e5cfd3f23b: Text # Text
+    00651ecb-b941-4cd7-ab71-e7e5cfd3f23b: 'Text Block' # Text Block
     680dd936-cde7-4118-9031-7dc4bfe77573: Button # Button
     886b46bf-da60-4dcc-a940-a7e0854a7403: 'Post Content' # Post Content
     1972d550-c860-4711-96da-5922ac550c76: 'Reusable Fields' # Reusable Fields

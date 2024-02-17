@@ -6,8 +6,8 @@
     {% if neoField|length %}
         {% for block in neoField %}
             {% switch block.type.handle %}
-            {% case 'text' %}
-            <div class="text-block text-align-{{ block.textAlign }}">
+            {% case 'textBlock' %}
+            <div class="text-block text-align-{{ block.textAlign }} mb-5">
                 {# Heading #}
                 {% if block.headingClass is defined and block.headingClass is not empty %}
                     {% set validHeadingClass = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] %}
