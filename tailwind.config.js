@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./web/**/*.html', './web/src/**/*.js', 'templates/**/*.twig'], // Add your HTML, JavaScript, and Twig files here
+  content: ['./web/**/*.html', './web/src/**/*.js', 'templates/**/*.twig', './src/**/*.scss'], // Add your HTML, JavaScript, and Twig files here
   theme: {
     extend: {
       fontSize: {
