@@ -4,11 +4,20 @@
     <div class="container">
         {% set neoField = entry.neoModules %}
         {% if neoField|length %}
-            {% for block in neoField.all() %}
+            {% for block in neoField %}
                 {% switch block.type.handle %}
                 {% case 'text' %}
-                    <div class="text-block text-align-{{ block.textAlign }}  text-3xl font-bold underline">
-                        <p class="font-bold">{{ block.text }}</p>
+                    <div class="text-block text-align-{{ block.textAlign }}">
+                        {# Heading #}
+                        <{{ block.headingTag }} class="block-heading">{{ block.heading }}</{{ block.headingTag }}>
+
+                        {# Text #}
+                        <p class="block-text mb-3">{{ block.text }}</p>
+
+                        {# Button #}
+                        {% for button in block.button %}
+                            <a href="{{ button.buttonUri }}" class="button">{{ button.buttonText }}</a>
+                        {% endfor %}
                     </div>
                 {% default %}
                     {# Handle other block types if needed #}
@@ -17,3 +26,4 @@
         {% endif %}
     </div>
 {% endblock %}
+
