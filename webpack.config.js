@@ -12,6 +12,7 @@ const config = {
     output: {
         path: path.resolve(__dirname, './web/dist'),
     },
+    devtool: isProduction ? false : 'inline-source-map', // Enable source maps only in development mode
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html',
