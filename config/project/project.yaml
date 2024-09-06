@@ -1,4 +1,4 @@
-dateModified: 1708208511
+dateModified: 1725648663
 email:
   fromEmail: jabaltorres@gmail.com
   fromName: 'Tutorial Site'
@@ -16,6 +16,7 @@ meta:
     0afd5de4-5de3-4dc8-99e7-7a6c9df9ea63: 'Tutorial Site' # Tutorial Site
     0f1d7dfe-0c34-48e4-9078-1edfe1ca6e9b: Common # Common
     0f31503b-cd5c-4116-a3b3-c8fed72e2701: 'Feature Image' # Feature Image
+    1a6e97f4-e796-4fdc-94b1-b765c3e4af7c: Pricing # Pricing
     1ca00a3f-93ce-4ef6-a2d4-32b6a2123198: Button # Button
     1f3df265-ec7c-4b27-b693-2a53c5ff1f1b: 'Text Align' # Text Align
     3bb780d9-143a-44f5-93b1-484a288ad88b: Blog # Blog
@@ -35,6 +36,7 @@ meta:
     680dd936-cde7-4118-9031-7dc4bfe77573: Button # Button
     886b46bf-da60-4dcc-a940-a7e0854a7403: 'Post Content' # Post Content
     1972d550-c860-4711-96da-5922ac550c76: 'Reusable Fields' # Reusable Fields
+    81105f36-1470-4a0b-9497-d6925b04bff3: Pricing # Pricing
     135505bb-6683-40d7-8961-76d77c88421e: 'Profile Photo' # Profile Photo
     162147f8-0e19-48ba-b875-292508a05162: Heading # Heading
     428644de-73aa-4389-9583-68a8bbf8b95c: Summary # Summary

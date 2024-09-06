@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pricing
+name: Pricing
+propagationMethod: all
+siteSettings:
+  0afd5de4-5de3-4dc8-99e7-7a6c9df9ea63: # Tutorial Site
+    enabledByDefault: true
+    hasUrls: true
+    template: pricing
+    uriFormat: pricing
+type: single
