@@ -1,0 +1,28 @@
+{% set priceLabel = tier.included ? 'Included' : '$' ~ tier.price ~ ' per month' %}
+
+<label class='
+  product-row
+  product-row--addon
+  {{ type == 'checkbox' ? 'product-row--binary' : null }}
+  {{ disabled ? 'product-row--disabled' : null }}
+  {{ tier.included ? 'product-row--included' : null }}
+  {{ checked ? 'product-row--selected' : null }}
+  '
+  data-alias='{{ alias }}'
+  data-id='{{ id }}'
+  data-name='{{ tier.name }}'
+  data-price='{{ tier.price }}'>
+  {% if disabled == false %}
+    <input
+      class='product-row_control'
+      name='addon[{{ alias }}]'
+      type='{{ type }}'
+      value='{{ id }}'
+      {{ checked ? 'checked' : null }}
+      aria-label='{{ tier.name }} add-on. {{ priceLabel }}'
+      autocomplete='off'
+    />
+  {% endif %}
+  <div class='product-row_name'>{{ tier.optionLabel|default(tier.name) }}</div>
+  <div class='product-row_price'>{{ tier.included ? 'Included' : priceLabel  }}</div>
+</label>

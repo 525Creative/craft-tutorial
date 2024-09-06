@@ -1,0 +1,48 @@
+{% set categories = entry.featureCategory %}
+<div class="pricing-features">
+
+  {# Iterate through pricing page feature list #}
+  {% for category in categories %}
+
+    {# Find provider features associated with category #}
+    {% set features = craft.entries
+      .section('providerFeatures')
+      .relatedTo({ targetElement: category })
+      .all() %}
+
+    <div class="pricing-features_topic">
+      <h3>{{ category.seoTitle }}</h3>
+      <ul>
+        {% for feature in features %}
+          <li class="pricing-feature-check">
+            {% if feature.newFeature %}
+              <span class="badge badge--new">NEW</span>
+            {% endif %}
+
+            {% if feature.websiteUrl %}
+              <a href="{{ feature.websiteUrl }}" target="_blank">{{ feature.title }}</a>
+            {% else %}
+              {{ feature.title }}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  {% endfor %}
+
+  <div class="pricing-features-cta">
+    <div>
+      <h3>Ready to get started?</h3>
+      <p class="pricing-features-cta_desc">We’ll start you off with our free developer plan (100 test emails per month)</p>
+      <a href="{{ urls.signup }}"
+         class="cta-btn cta-btn--default js-signup"
+         data-track="Click"
+         data-category="Signup Button">
+        Start free trial
+      </a>
+      <p class="pricing-features-cta_meta">No credit card required</p>
+    </div>
+  </div>
+
+</div>

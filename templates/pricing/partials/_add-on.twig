@@ -1,0 +1,65 @@
+{# Example of data that needs to be passed to this partial #}
+
+{# set addOns = [
+  {
+    'alias': 'dedicated-ips',
+    'name': 'Dedicated IPs',
+    'description': 'Our fully managed dedicated IPs are available to customers sending 300,000 emails per month or more.',
+    'learnMoreUrl': '/dedicated-ips',
+    'enabled': true,
+    'note': 'Please contact us once you’ve signed up if you’d like to <a href="/contact?topic=dedicated-ip">request a dedicated IP</a>.',
+    'tiers': [
+      {
+        'name': 'Dedicated IP',
+        'price': 50,
+        'included': false
+      }
+    ]
+  },
+  {
+    'alias': 'dmarc-monitoring',
+    'name': 'DMARC Monitoring',
+    'description': 'We provide DMARC monitoring as a separate service through <a href="https://dmarcdigests.com">DMARC Digests</a>. Pricing starts at $10 a month per domain.',
+    'learnMoreUrl': 'https://dmarcdigests.com',
+    'enabled': true,
+    'note': '',
+    'tiers': [
+      {
+        'name': 'DMARC Monitoring',
+        'price': 10,
+        'included': false
+      }
+    ]
+  }
+] #}
+
+<div class='product-selector{{ addOn.enabled == false ? ' product-selector--disabled' : null }}'>
+  <div class='product-selector_header'>
+    <h2 class='product-selector_title'>{{ addOn.name }}</h2>
+    <div class='product-selector_desc'>
+      {{ addOn.description | raw }}
+      {% if addOn.learnMoreUrl %}
+        <a href='{{ addOn.learnMoreUrl }}' class='product-selector_learn-more'>Learn more</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class='product-selector_items'>
+
+    {% for tier in addOn.tiers %}
+      {% include 'pricing/partials/_add-on-tier' with {
+        id: addOn.alias ~ '-' ~ loop.index,
+        tier: tier,
+        alias: addOn.alias,
+        checked: tier.included,
+        disabled: addOn.enabled == false,
+        type: addOn.tiers | length > 1 ? 'radio' : 'checkbox'
+      } %}
+    {% endfor %}
+
+  </div>
+
+  {% if addOn.note %}
+    <p class='product-selector_note'>{{ addOn.note|raw }}</p>
+  {% endif %}
+</div>

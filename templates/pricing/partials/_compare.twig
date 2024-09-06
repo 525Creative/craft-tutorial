@@ -1,0 +1,44 @@
+{% set comparisonPages = craft.entries.section('comparisonPages').level(1).status(null).all() %}
+
+<section class="section section--compare">
+
+  {% for image in craft.assets.filename('Smtp@2x.png').all() %}
+    {% set retina = {
+        mode: 'fit',
+        width: 340,
+        height: 160,
+        position: 'top-center'
+    } %}
+
+    {% set nonRetina = {
+        mode: 'fit',
+        width: 170,
+        height: 80,
+        position: 'top-center'
+    } %}
+
+    {% set lazyLoad = {
+        mode: 'fit',
+        width: 85,
+        height: 40,
+        position: 'top-center',
+        quality: 30
+    } %}
+
+    <img
+      src="{{ image.getUrl(lazyLoad) }}"
+      data-lazy-src="{{ image.getUrl(nonRetina) }}"
+      data-lazy-srcset="{{ image.getUrl(retina) }} 2x"
+      alt="{{ image.title }}"
+      width="170"
+      height="80"
+      class="section_icon">
+  {% endfor %}
+
+  <h2 class="section_title">See how Postmark stacks up against<br>other email service providers</h2>
+  <p class="section_desc">Select a provider below to see a comparison.</p>
+
+  <div class="u-container">
+    {% include 'compare/partials/_providers' with { hideTitle: true } %}
+  </div>
+</section>

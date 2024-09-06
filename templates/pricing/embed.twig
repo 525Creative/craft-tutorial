@@ -1,0 +1,33 @@
+{#
+ # Pricing table embed
+ # -----------------
+ #}
+
+{% extends "_layout-blank" %}
+
+{% set title = 'Postmark Pricing' %}
+{% set hasTitleSuffix = false %}
+
+{% block headMeta %}
+  <meta name="robots" content="noindex">
+{% endblock %}
+
+{% block content %}
+
+  <section class="section-pricing section-pricing--embed">
+    <div class="u-container section-pricing_content">
+      <div class="pricing-results">
+        <div class="u-grid u-grid--full">
+          <div class="pricing-results_content">
+            {% include "partials/_pricing-table" %}
+            {% include 'pricing/partials/_add-ons' %}
+          </div>
+          <div class="pricing-results_calculator">
+            {% include 'pricing/partials/_calculator-table' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

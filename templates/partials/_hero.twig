@@ -1,0 +1,31 @@
+<header class="hero hero--header {{ modifiers|default('') }}">
+  <div class="u-container">
+    {% if icon is defined and icon|length > 0 %}
+      {% set icon = icon.one() %}
+
+      {% set nonRetina = {
+          mode: 'crop',
+          width: icon.getWidth() / 2,
+          height: icon.getHeight() / 2,
+          position: 'top-center'
+      } %}
+
+      <div class="hero_icon">
+        <img src="{{ icon.getUrl(nonRetina) }}" srcset="{{ icon.url }} 2x" alt="{{ iconAltText }}">
+      </div>
+    {% endif %}
+    {% if preText is defined and preText %}
+    <p class="hero_pre-text">{{ preText }}</p>
+    {% endif %}
+
+      {% if headline is defined and headline %}
+    <h1 class="hero_title title-hero">{{ headline | raw }}</h1>
+    {% endif %}
+
+    {% if description is defined and description %}
+    <p class="hero_desc hero_desc--half">{{ description }}</p>
+    {% endif %}
+
+    {% block heroContent %}{% endblock %}
+  </div>
+</header>

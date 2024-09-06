@@ -1,0 +1,36 @@
+{#
+ # Pricing template
+ # -----------------
+ #}
+
+{% extends "_layout" %}
+
+{% set hasTitleSuffix = false %}
+{% set bodyClass = 'pricing' %}
+
+{% block content %}
+  {% cache %}
+      {% embed 'partials/_hero' with {
+          modifiers: 'hero--pricing',
+          description: entry.description
+      } %}
+
+          {% block heroContent %}
+              <h3 class="pricing-slider-title">How many emails do you send and receive per month?</h3>
+              <div class="pricing-slider js-pricing-slider">
+                  <div class="pricing-slider_total js-pricing-total">100 emails</div>
+              </div>
+          {% endblock %}
+      {% endembed %}
+
+      <section class="section-pricing">
+        <div class="u-container section-pricing_content">
+          {% include 'pricing/partials/_results-slider' %}
+          {% include 'pricing/partials/_pricing-cards' %}
+          {% include 'pricing/partials/_pricing-features-table' %}
+    {#      {% include 'pricing/partials/_features' %}#}
+        </div>
+      </section>
+
+  {% endcache %}
+{% endblock %}

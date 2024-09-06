@@ -1,0 +1,45 @@
+<div class="pricing-calculator">
+  <form action="#" method="get" class="pricing-calculator_form form" autocomplete="off">
+    <input type="text" name="volume" placeholder="Monthly email volume" class="pricing-calculator_input"><input type="submit" value="Calculate" class="cta-btn cta-btn--default pricing-calculator_submit">
+  </form>
+
+  {# Blank State #}
+  <div class="pricing-calculator_blank">
+    <h3 class="pricing-calculator_title">What’s your monthly email volume?</h3>
+    <p class="pricing-calculator_desc">Tell us how many emails your application sends and receives each month and we’ll find the best tier for you </p>
+
+    <img src="/images/message-stack-mono.svg"
+         width="180"
+         height="68"
+         alt="Three stacks of envelopes"
+         class="pricing-calculator_icon">
+  </div>
+
+  {# Results #}
+  <div class="pricing-calculator_results hidden">
+    <div class="pricing-calculator_body">
+      <div class="pricing-calculator_amount"></div>
+      <div class="pricing-calculator_period">Estimated monthly cost</div>
+    </div>
+
+    <table class="pricing-calculator_breakdown"></table>
+
+    <a href="{{ urls.signup }}" class="cta-btn cta-btn--default cta-btn--large cta-btn--fill-h">Start free trial</a>
+
+    <p class="pricing-calculator_reset">
+      <a href="#" class="js-reset-calculator">Reset calculator</a>
+    </p>
+  </div>
+
+  {# High Volume #}
+  <div class="pricing-calculator_high-volume hidden">
+    <div class="pricing-calculator_body">
+      <h3 class="pricing-calculator_title">Hey big sender!</h3>
+      <p class="pricing-calculator_desc">Let’s work together to improve your deliverability. <a href="{{url('talk-to-sales')}}">Contact us</a> to get started.</p>
+    </div>
+  </div>
+
+  <div class="pricing-calculator_instructions hidden">
+    <p class="pricing-calculator_note">We’ll start you off with our free developer plan. <br>(100 test emails per month)</p>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+{# Static add-on column #}
+{# For selectable add-ons that interact with the calculator, see _add-on.twig #}
+
+
+<div class="pricing-add-on u-grid-cell">
+  <div class="pricing-add-on_title">
+    <h2>{{ addOn.name }}</h2>
+    <p class="pricing-add-on_price">
+      <strong>Starts at ${{ addOn.price }}</strong>/month
+      {% if addOn.unit is defined %}
+        per {{ addOn.unit }}
+      {% endif %}
+    </p>
+  </div>
+  <p class="pricing-add-on_desc">{{ addOn.description }}</p>
+  <p class="pricing-add-on_cta">
+    {% if addOn.learnMoreUrl %}
+      <a href="{{ addOn.learnMoreUrl }}">Learn more &rarr;</a>
+    {% endif %}
+  </p>
+</div>
