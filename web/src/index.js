@@ -1,4 +1,7 @@
-import './stylsheets/styles.scss';
+import './stylesheets/styles.scss';
 
-console.log("Hello World! index.js is running");
+import './javascripts/pricing.js';
+import './javascripts/pricing-slider.js';
+
+console.log("Hello World! Index.js is running");
 
