@@ -1,0 +1,19 @@
+/* Header */
+
+header {
+  padding: var(--layout-site-gutter);
+  background-color: #efefef;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    //margin-bottom: var(--layout-site-section-spacer);
+  }
+
+  .home {
+    font-weight: bold;
+  }
+
+}
+
+

@@ -1,7 +1,8 @@
 /* About */
 
 .about {
-  border: solid thin blue;
+  border: solid thin red;
+  padding: 20px;
   .photo {
     border-radius: 100%;
     height: 180px;
@@ -10,4 +11,3 @@
     width: 180px;
   }
 }
-

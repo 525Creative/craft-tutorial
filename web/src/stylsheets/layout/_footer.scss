@@ -1,0 +1,17 @@
+/* Footer */
+
+footer {
+  font-size: 0.75em;
+  //margin-top: var(--layout-site-section-spacer);
+  text-align: center;
+  background-color: #efefef;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer .copyright,
+footer .colophon {
+  color: var(--color-muted);
+}
