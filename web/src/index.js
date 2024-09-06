@@ -1,4 +1,4 @@
 import './stylsheets/styles.scss';
 
-console.log("Hello World! This is Jabal");
+console.log("Hello World! index.js is running");
 
