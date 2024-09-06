@@ -1,0 +1,142 @@
+// Pricing Table
+
+$primary-color: #333;
+$secondary-color: #555;
+$bg-color: #fff;
+$border-color: #ddd;
+$checkmark-color: $c-mint-400;
+$header-bg-color: #f8f9fa;
+$padding: 15px;
+
+.pricing-table-new {
+  background-color: $bg-color;
+
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+
+    thead {
+      //background-color: $header-bg-color;
+      text-align: center;
+
+      th {
+        padding: $padding;
+        font-size: 1.25rem;
+        color: $primary-color;
+        //border-bottom: 2px solid $border-color;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $border-color;
+
+        td {
+          padding: $padding;
+          text-align: center;
+          font-size: 1rem;
+          color: $secondary-color;
+          border: solid thin #DCE2E5;
+
+          &:first-child {
+            text-align: left;
+            font-weight: bold;
+          }
+
+          .checkmark {
+            color: $checkmark-color;
+            font-size: 1.5rem;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pricing-table {
+      thead {
+        display: none;
+      }
+
+      tbody {
+        tr {
+          display: block;
+          margin-bottom: 10px;
+
+          td {
+            display: block;
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+
+            &:first-child {
+              text-align: left;
+              padding-left: $padding;
+              font-weight: normal;
+              background-color: $header-bg-color;
+              border-bottom: 2px solid $border-color;
+            }
+
+            &::before {
+              content: attr(data-label);
+              position: absolute;
+              left: $padding;
+              width: calc(50% - $padding);
+              text-align: left;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pricing-table-new  {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    background-color: #fff; /* Background color to prevent transparency issues */
+  }
+  th {
+    padding: 15px;
+    text-align: center;
+    background-color: #f8f9fa; /* Matches header background color */
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+  }
+}
+
+$table-light-grey: #fcfcfc;
+.pricing-table-new {
+  tr {
+    width: 100%;
+    td, th {
+      &:nth-child(1) {
+        background-color: #ffffff;
+        width: 50%;
+      }
+
+      &:nth-child(2) {
+        background-color: $table-light-grey;
+        width: 16.666%;
+      }
+
+      &:nth-child(3) {
+        background-color: #ffffff;
+        width: 16.666%;
+      }
+
+      &:nth-child(4) {
+        background-color: $table-light-grey;
+        width: 16.666%;
+      }
+    }
+  }
+}

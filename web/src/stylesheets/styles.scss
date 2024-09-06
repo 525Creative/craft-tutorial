@@ -33,6 +33,9 @@
 //│
 //└── styles.scss                 // Main SCSS entry point
 
+@import "base/variables";
+@import "base/mixins";
+@import "base/color-palette";
 @import "base/typography";
 
 @import "layout/header";
@@ -44,6 +47,15 @@
 @import "blog/blog";
 
 @import "utilities/helpers";
+
+// Used on the Pricing page
+@import '~nouislider/dist/nouislider.css';
+@import "pricing/pricing";
+@import "pricing/pricing-cards";
+@import "pricing/pricing-features-table";
+@import "pricing/pricing-table";
+//@import "pricing/product-row";
+@import "pricing/product-selector";
 
 /* Variables */
 

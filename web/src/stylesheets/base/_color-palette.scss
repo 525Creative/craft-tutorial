@@ -1,0 +1,122 @@
+/* Accessible Color Palette
+https://github.com/efedorenko/hcl-color-palette
+Based on revision 7f30c6e2 from 8/9/21
+------------------------------------------------- */
+
+/*
+Recommended contrast ratios (background -> foreground):
+white ->  600 and darker
+50    ->  700 and darker
+100   ->  700 and darker
+200   ->  700 and darker
+300   ->  800 and darker
+400   ->  800 and darker
+500   ->  900 and darker
+600   ->  white
+700   ->  200 and lighter
+800   ->  400 and lighter
+900   ->  500 and lighter
+*/
+
+$c-white: #FFF;
+$c-black: #000;
+
+$c-red-50:  #FFF8F7;
+$c-red-100: #FFE7E3;
+$c-red-200: #FFD5CF;
+$c-red-300: #FFB3AA;
+$c-red-400: #FB9186;
+$c-red-500: #F0655D;
+$c-red-600: #D14642;
+$c-red-700: #9E3834;
+$c-red-800: #6D2A26;
+$c-red-900: #401C19;
+
+$c-orange-50:  #FFF8F3;
+$c-orange-100: #FFE7D6;
+$c-orange-200: #FFD6BA;
+$c-orange-300: #FFB584;
+$c-orange-400: #FA9552;
+$c-orange-500: #D87A3D;
+$c-orange-600: #AF6334;
+$c-orange-700: #854C2B;
+$c-orange-800: #5D3621;
+$c-orange-900: #382217;
+
+$c-yellow-50:  #FFFADE;
+$c-yellow-100: #FFEC86;
+$c-yellow-200: #FFDE00;
+$c-yellow-300: #E6C40E;
+$c-yellow-400: #CDAC15;
+$c-yellow-500: #AE8F18;
+$c-yellow-600: #8F7319;
+$c-yellow-700: #6F5718;
+$c-yellow-800: #4F3D15;
+$c-yellow-900: #302511;
+
+$c-lime-50:  #F7FBF0;
+$c-lime-100: #E5F1CC;
+$c-lime-200: #D2E6A8;
+$c-lime-300: #AED364;
+$c-lime-400: #89BF1D;
+$c-lime-500: #72A018;
+$c-lime-600: #5D8214;
+$c-lime-700: #47630F;
+$c-lime-800: #32460B;
+$c-lime-900: #1F2B07;
+
+$c-mint-50:  #F4FBF6;
+$c-mint-100: #DBF1E1;
+$c-mint-200: #C0E8CC;
+$c-mint-300: #8CD6A5;
+$c-mint-400: #4FC47E;
+$c-mint-500: #3FA46C;
+$c-mint-600: #308559;
+$c-mint-700: #236645;
+$c-mint-800: #184832;
+$c-mint-900: #0E2C1F;
+
+$c-blue-50:  #F5FAFD;
+$c-blue-100: #DEEEF8;
+$c-blue-200: #C7E2F4;
+$c-blue-300: #9CCDEB;
+$c-blue-400: #70B6E2;
+$c-blue-500: #3899D7;
+$c-blue-600: #007BC8;
+$c-blue-700: #005E99;
+$c-blue-800: #00436D;
+$c-blue-900: #002944;
+
+$c-slate-50:  #F9F9FA;
+$c-slate-100: #EAECEF;
+$c-slate-200: #DCDFE3;
+$c-slate-300: #C2C6CE;
+$c-slate-400: #A8AFBA;
+$c-slate-500: #8A92A2;
+$c-slate-600: #6E7788;
+$c-slate-700: #545B68;
+$c-slate-800: #3B4049;
+$c-slate-900: #24272D;
+
+$c-beige-50:  #FAF9F7;
+$c-beige-100: #EEECE4;
+$c-beige-200: #E1DFD5;
+$c-beige-300: #C8C6BE;
+$c-beige-400: #B0AEA7;
+$c-beige-500: #93928C;
+$c-beige-600: #787771;
+$c-beige-700: #5B5A57;
+$c-beige-800: #40403D;
+$c-beige-900: #272725;
+
+$c-grey-25:  #FDFDFD;
+$c-grey-50:  #F9F9F9;
+$c-grey-100: #ECECEC;
+$c-grey-200: #DEDEDE;
+$c-grey-300: #C6C6C6;
+$c-grey-400: #AEAEAE;
+$c-grey-500: #929292;
+$c-grey-600: #767676;
+$c-grey-700: #5A5A5A;
+$c-grey-800: #404040;
+$c-grey-900: #272727;

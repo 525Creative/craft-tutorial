@@ -1,0 +1,178 @@
+// Pricing Table
+
+$alternateRowColor: #FFFDEE;
+
+.pricing-table-new {
+
+  .pricing-table {
+    position: relative;
+    z-index: auto;
+  }
+
+  .pricing-table-head {
+    display: flex;
+    align-items: stretch;
+    transition: height 0.3s ease, transform 0.3s ease; /* Smooth transition for height and transform */
+
+    .pricing-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .plan-tier {
+      transition: font-size 0.3s ease;
+    }
+  }
+
+  .detailed .pricing-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 0 15px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+  }
+
+  .pricing-table-head.detailed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  .pricing-table-head.detailed.fade-in {
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+
+  .pricing-table-head.detailed.fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+  }
+
+  .pricing-column {
+    box-sizing: border-box;
+    border: 1px solid #ebebeb;
+    padding: 15px;
+    text-align: center;
+
+    &.cell-full-width {
+      width: 100%;
+    }
+  }
+
+  .alternateRowColor {
+    background-color: $alternateRowColor;
+
+    .cell-feature {
+      background-color: $alternateRowColor;
+    }
+  }
+
+  // Global styles for checkmark - consider extracting to a mixin or global style
+  .checkmark {
+    display: inline-flex;
+    align-self: center;
+
+    svg {
+      display: inline-block;
+      height: 23px;
+      width: 23px;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .pricing-table-head {
+      display: flex;
+
+      .cell-feature {
+        display: none;
+      }
+
+      .pricing-column {
+        flex: 1;
+      }
+    }
+
+    .pricing-row {
+      .cell-feature {
+        display: block;
+        background-color: #F4F4F4;
+      }
+
+      .plans-container {
+        display: flex;
+        flex-direction: row;
+
+        .pricing-column {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  @include at-m {
+    .pricing-table {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pricing-table-head {
+      .plan-tier {
+        font-size: 2em;
+      }
+    }
+
+    .pricing-row {
+      display: flex;
+      width: 100%;
+    }
+
+    .pricing-column {
+      width: 25%;
+    }
+
+    .plans-container {
+      display: flex;
+      width: 75%;
+
+      .pricing-column {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+
+  @include at-l {
+    .detailed .pricing-wrapper {
+      padding: 0 50px;
+    }
+  }
+}
